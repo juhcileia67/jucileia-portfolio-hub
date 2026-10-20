@@ -1,0 +1,20 @@
+PORTFOLIO DE JUCILEIA — COPIA DA VERSAO 4
+Codigo HTML, CSS, JavaScript e imagens originais, sem alteracoes.
+
+GITHUB PAGES
+1. Abra github.com/juhcileia67/jucileia-portfolio-hub.
+2. Para Pages gratuito no GitHub Free, use um repositorio publico.
+3. Extraia este ZIP e envie os arquivos e a pasta assets para a raiz do repositorio. Nao envie apenas o ZIP.
+4. Settings > Pages > Deploy from a branch > main > / (root) > Save.
+5. Aguarde o GitHub informar a URL publicada.
+
+OUTRA CONTA DO CHATGPT
+Entre na conta de destino, anexe este ZIP e solicite:
+Use Sites para criar um novo site a partir deste projeto. Preserve integralmente HTML, CSS, JavaScript, imagens, textos, cores e interacoes. Nao redesenhe. O index.html esta na raiz. Crie uma nova identidade de projeto nesta conta e publique uma copia.
+Isso cria uma copia; nao transfere o historico nem a propriedade do site original.
+
+ORIGEM
+Site: jucileia-portfolio-hub
+Versao: 4
+Commit: 587ae95952defddf8f4eee07621bfc2e3adf5624
+O site original nao foi modificado.

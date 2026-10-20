@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio de Juciléia Gonçalves: ideias, protótipos e experiências digitais em construção.">
+  <title>Juciléia Gonçalves | Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop stop-color='%2300d9ff'/%3E%3Cstop offset='.5' stop-color='%237c3cff'/%3E%3Cstop offset='1' stop-color='%23ff27c8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M32 3 58 54H45l-6-12H24l-6 12H6L32 3Zm0 22-5 10h10l-5-10Z'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="orb orb-one" aria-hidden="true"></div>
+  <div class="orb orb-two" aria-hidden="true"></div>
+
+  <div class="shell">
+    <aside class="sidebar glass">
+      <a class="brand" href="#inicio" aria-label="Início">
+        <span class="monogram">JG</span>
+        <span><strong>JUCILÉIA</strong><small>Portfólio</small></span>
+      </a>
+
+      <label class="side-search">
+        <span class="sr-only">Buscar projetos</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.4-4.4m2.4-5.1a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+        <input data-search type="search" placeholder="Buscar projetos...">
+      </label>
+
+      <div class="stats" aria-label="Resumo do portfólio">
+        <div><strong>4</strong><span>Projetos</span></div>
+        <div><strong>7</strong><span>Etapas</span></div>
+      </div>
+
+      <div class="progress-block">
+        <div class="progress-head"><span>Trajetória</span><span>em construção</span></div>
+        <div class="progress"><i></i></div>
+      </div>
+
+      <nav class="areas" aria-label="Filtrar projetos">
+        <span class="nav-label">Área</span>
+        <button class="filter active" data-filter="todos"><span></span>Todos <b>4</b></button>
+        <button class="filter" data-filter="educacao"><span></span>Educação <b>1</b></button>
+        <button class="filter" data-filter="ia"><span></span>IA <b>2</b></button>
+        <button class="filter" data-filter="mobile"><span></span>Mobile <b>3</b></button>
+        <button class="filter" data-filter="ux"><span></span>UX e produto <b>4</b></button>
+      </nav>
+
+      <a class="contact-link" href="#contato">Vamos conversar <span>↗</span></a>
+    </aside>
+
+    <nav class="rail glass" aria-label="Navegação principal">
+      <a class="rail-item active" href="#inicio" aria-label="Início"><svg viewBox="0 0 24 24"><path d="M3 11 12 3l9 8v9a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg></a>
+      <a class="rail-item" href="#projetos" aria-label="Projetos"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></a>
+      <a class="rail-item" href="#processo" aria-label="Processo"><svg viewBox="0 0 24 24"><path d="M4 19v-4m0-6V5m8 14v-6m0-6V5m8 14v-2m0-6V5M2 15h4m4-2h4m4-2h4"/></svg></a>
+      <a class="rail-item" href="#contato" aria-label="Contato"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></a>
+      <span class="rail-spacer"></span>
+      <span class="mini-avatar">JG</span>
+    </nav>
+
+    <main class="workspace">
+      <header class="topbar glass" id="inicio">
+        <div>
+          <p class="eyebrow">PORTFÓLIO PESSOAL</p>
+          <h1>Ideias que ganham forma<span class="neon-dot">.</span></h1>
+          <p>Projetos digitais, protótipos e experimentação com IA.</p>
+        </div>
+        <label class="top-search">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.4-4.4m2.4-5.1a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+          <span class="sr-only">Buscar projetos</span>
+          <input data-search type="search" placeholder="Buscar projetos...">
+        </label>
+        <button class="view-toggle active" data-view="grid" aria-label="Visualização em grade"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></button>
+        <button class="view-toggle" data-view="list" aria-label="Visualização em lista"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></button>
+      </header>
+
+      <section class="intro glass">
+        <div>
+          <span class="kicker">OI, EU SOU JUCILÉIA</span>
+          <h2>Transformo perguntas em experiências que podem ser vistas, testadas e melhoradas.</h2>
+        </div>
+        <p>Minha trajetória em tecnologia nasceu da curiosidade. Observo problemas, exploro possibilidades e uso ferramentas digitais e IA para aproximar ideias de algo concreto.</p>
+        <a href="#processo">Conhecer meu processo <span>↓</span></a>
+        <img class="intro-axia" src="assets/axis-avatar.png" alt="Avatar visual da identidade Axis">
+      </section>
+
+      <section id="trajetoria" class="story-section">
+        <div class="section-heading">
+          <div><span class="kicker">QUEM SOU · MINHA TRAJETÓRIA</span><h2>Minha trajetória não começou na tecnologia.</h2></div>
+          <p>Ela começou observando pessoas, detalhes e experiências — e ganhou novas possibilidades quando encontrei a inteligência artificial.</p>
+        </div>
+        <div class="story-grid">
+          <article class="story-card story-beauty">
+            <span class="story-number">01</span><small>9+ ANOS DE EXPERIÊNCIA</small>
+            <h3>Beleza, pessoas e atendimento</h3>
+            <p>Clientes, confiança, comunicação e a experiência completa de quem estava do outro lado.</p>
+          </article>
+          <article class="story-card story-visual">
+            <img src="assets/journey-desk.png" alt="Exploração visual dos projetos de Juciléia">
+            <span class="story-number">02</span><div><small>DESENHO · IMAGEM · VÍDEO</small><h3>Um olhar construído na prática</h3><p>Composição, formas, cores, identidade e apresentação.</p></div>
+          </article>
+          <article class="story-card story-tech">
+            <img src="assets/axia-mockup.png" alt="AXIA, personagem do projeto Learn Educação">
+            <span class="story-number">03</span><div><small>CURIOSIDADE TECNOLÓGICA</small><h3>Da assistência técnica à IA</h3><p>A tecnologia virou uma forma de transformar ideias em experiências visíveis e testáveis.</p></div>
+          </article>
+          <article class="story-card story-method">
+            <span class="story-number">04</span><small>MEU JEITO DE CRIAR</small>
+            <h3>Observar → questionar → prototipar → evoluir</h3>
+            <p>Não fico presa à primeira versão. Comparo, reorganizo e melhoro conforme o projeto revela novas necessidades.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projetos" class="projects-section">
+        <div class="section-heading">
+          <div><span class="kicker">PROJETOS E EXPERIMENTOS</span><h2>O que estou construindo</h2></div>
+          <p id="result-count">4 projetos encontrados</p>
+        </div>
+
+        <div class="project-grid" id="project-grid">
+          <article class="project-card featured" data-tags="educacao ia mobile ux learn axia">
+            <div class="card-art art-learn" aria-hidden="true"><span>LEARN</span><i></i></div>
+            <div class="card-overlay"></div>
+            <div class="card-copy"><span class="status">PROJETO PRINCIPAL</span><h3>Learn Educação</h3><p>Ecossistema educacional conectado entre aluno, professor, instituição e IA.</p><div class="tags"><span>Educação</span><span>Produto</span></div><button class="open-project" data-project="learn">Explorar <span>↗</span></button></div>
+          </article>
+
+          <article class="project-card" data-tags="ia educacao ux axia assistente">
+            <div class="card-art art-axia" aria-hidden="true"><span>AXIA</span><i></i></div>
+            <div class="card-overlay"></div>
+            <div class="card-copy"><span class="status">EM EVOLUÇÃO</span><h3>AXIA</h3><p>Assistente educacional pensada para orientar sem entregar respostas prontas.</p><div class="tags"><span>IA</span><span>UX</span></div><button class="open-project" data-project="axia">Explorar <span>↗</span></button></div>
+          </article>
+
+          <article class="project-card" data-tags="mobile ux android prototipos">
+            <div class="card-art art-mobile" aria-hidden="true"><span>MOBILE</span><i></i></div>
+            <div class="card-overlay"></div>
+            <div class="card-copy"><span class="status">PROTÓTIPOS</span><h3>Experiências Android</h3><p>Fluxos, telas e versões funcionais construídas e testadas pelo celular.</p><div class="tags"><span>Mobile</span><span>Protótipo</span></div><button class="open-project" data-project="mobile">Explorar <span>↗</span></button></div>
+          </article>
+
+          <article class="project-card" data-tags="ux produto ia pesquisa estudos visual">
+            <div class="card-art art-studies" aria-hidden="true"><span>LAB</span><i></i></div>
+            <div class="card-overlay"></div>
+            <div class="card-copy"><span class="status">LABORATÓRIO</span><h3>Estudos de produto e UX</h3><p>Pesquisas, comparações e explorações visuais para descobrir caminhos melhores.</p><div class="tags"><span>Pesquisa</span><span>UX</span></div><button class="open-project" data-project="studies">Explorar <span>↗</span></button></div>
+          </article>
+        </div>
+        <div class="empty-state" hidden><h3>Nenhum projeto encontrado</h3><p>Tente outra busca ou escolha “Todos”.</p></div>
+      </section>
+
+      <section id="processo" class="process glass">
+        <div class="section-heading">
+          <div><span class="kicker">COMO EU PENSO E TRABALHO</span><h2>Da observação ao teste</h2></div>
+          <p>Um processo prático, desenvolvido enquanto os projetos evoluem.</p>
+        </div>
+        <ol class="process-list">
+          <li><b>01</b><strong>Perceber</strong><span>Identificar um problema ou experiência confusa.</span></li>
+          <li><b>02</b><strong>Perguntar</strong><span>Entender por que acontece e o que pode mudar.</span></li>
+          <li><b>03</b><strong>Imaginar</strong><span>Criar caminhos sem ficar presa à primeira ideia.</span></li>
+          <li><b>04</b><strong>Visualizar</strong><span>Transformar a ideia em fluxo, tela ou protótipo.</span></li>
+          <li><b>05</b><strong>Comparar</strong><span>Pesquisar referências e avaliar versões.</span></li>
+          <li><b>06</b><strong>Ajustar</strong><span>Reorganizar o que não combina mais com o objetivo.</span></li>
+          <li><b>07</b><strong>Testar</strong><span>Chegar a algo utilizável que possa receber feedback.</span></li>
+        </ol>
+      </section>
+
+      <section class="evolution glass" id="evolucao">
+        <div class="section-heading">
+          <div><span class="kicker">COMO O AXIS LEARN EVOLUIU</span><h2>Uma necessidade levou à próxima.</h2></div>
+          <p>O projeto não nasceu de uma lista pronta de funções. Cada etapa apareceu porque um novo problema foi percebido.</p>
+        </div>
+        <div class="evolution-track">
+          <article><b>01</b><small>ORIGEM</small><h3>Aprendizagem independente</h3><p>Cursos para estudar no próprio ritmo.</p></article>
+          <article><b>02</b><small>PERSONALIZAÇÃO</small><h3>AXIA</h3><p>Uma IA que apoia sem entregar tudo pronto.</p></article>
+          <article><b>03</b><small>CONEXÃO</small><h3>Professor e turmas</h3><p>O outro lado da aprendizagem entra no ecossistema.</p></article>
+          <article><b>04</b><small>COMPREENSÃO</small><h3>Mapa e Radar</h3><p>Dificuldades, progresso e necessidades de intervenção.</p></article>
+          <article><b>05</b><small>AMPLIAÇÃO</small><h3>Instituição</h3><p>Indicadores e experiências conectadas.</p></article>
+          <article><b>06</b><small>VALIDAÇÃO</small><h3>Primeiro piloto</h3><p>Começar pequeno e aprender com uso real.</p></article>
+        </div>
+      </section>
+
+      <section class="current-state">
+        <div class="state-copy glass"><span class="kicker">SITUAÇÃO ATUAL</span><h2>Construir, testar e aprender com evidências.</h2><p>Hoje existem protótipos, versões funcionais, estudos de interface, aplicativos experimentais, sites, pesquisas e hipóteses ainda em avaliação.</p></div>
+        <div class="state-questions glass"><span class="kicker">PERGUNTAS PARA O PILOTO</span><ul><li>O que os alunos realmente usam?</li><li>O que os professores consideram útil?</li><li>A AXIA realmente ajuda?</li><li>A instituição percebe valor?</li></ul><strong>Objetivo: transformar hipóteses em aprendizado baseado no uso real.</strong></div>
+      </section>
+
+      <section class="inside-section">
+        <div class="section-heading">
+          <div><span class="kicker">O LEARN POR DENTRO</span><h2>Um ecossistema, experiências diferentes.</h2></div>
+          <p>Abra cada parte para entender como aluno, professor, instituição e AXIA se conectam.</p>
+        </div>
+        <div class="inside-grid">
+          <button class="inside-card open-project" data-project="student"><span>01</span><small>EXPERIÊNCIA</small><h3>Aluno</h3><p>Aprender percebendo a própria evolução.</p><i>EXPLORAR ↗</i></button>
+          <button class="inside-card open-project" data-project="teacher"><span>02</span><small>APOIO</small><h3>Professor</h3><p>Tecnologia para reduzir trabalho, não criar novas tarefas.</p><i>EXPLORAR ↗</i></button>
+          <button class="inside-card open-project" data-project="school"><span>03</span><small>CONEXÃO</small><h3>Instituição</h3><p>Indicadores conectados à realidade da escola.</p><i>EXPLORAR ↗</i></button>
+          <button class="inside-card open-project" data-project="axiaDeep"><span>04</span><small>INTELIGÊNCIA ARTIFICIAL</small><h3>AXIA</h3><p>Apoio para aprender e ensinar sem substituir o raciocínio.</p><i>EXPLORAR ↗</i></button>
+        </div>
+      </section>
+
+      <section class="abilities glass" id="aptidoes">
+        <div class="section-heading"><div><span class="kicker">APTIDÕES DESENVOLVIDAS NA PRÁTICA</span><h2>O que aprendi construindo.</h2></div><p>Toque nos grupos para ver como essas habilidades aparecem no meu processo.</p></div>
+        <div class="ability-grid">
+          <button class="open-project" data-project="product"><b>01</b><h3>Visão de produto e pensamento sistêmico.</h3><span>VER APTIDÕES ↗</span></button>
+          <button class="open-project" data-project="experience"><b>02</b><h3>Experiência do usuário e sensibilidade visual.</h3><span>VER APTIDÕES ↗</span></button>
+          <button class="open-project" data-project="execution"><b>03</b><h3>Prototipagem, iteração e persistência.</h3><span>VER APTIDÕES ↗</span></button>
+          <button class="open-project" data-project="connections"><b>04</b><h3>Identificação de problemas e conexão de ideias.</h3><span>VER APTIDÕES ↗</span></button>
+        </div>
+      </section>
+
+      <section class="skills-row">
+        <div class="glass skill-panel"><span class="kicker">NA PRÁTICA</span><h2>O que venho desenvolvendo</h2><div class="skill-cloud"><span>Visão de produto</span><span>Prototipagem com IA</span><span>Criação de fluxos</span><span>Percepção visual</span><span>Pesquisa</span><span>Iteração</span><span>Identificação de problemas</span><span>Aprendizado de ferramentas</span></div></div>
+        <div class="glass next-panel"><span class="kicker">PRÓXIMO PASSO</span><h2>Transformar visão em um primeiro piloto.</h2><p>Quero organizar o núcleo do Learn, testar com pessoas reais e evoluir com feedback de alunos, professores e profissionais de produto.</p></div>
+      </section>
+
+      <section id="contato" class="contact glass">
+        <span class="kicker">CONTATO</span>
+        <h2>Se alguma dessas ideias fizer sentido para você, vamos conversar.</h2>
+        <p>Tenho interesse em tecnologia, produto, UX, educação, inteligência artificial e desenvolvimento de experiências digitais.</p>
+        <div class="contact-actions" aria-label="Canais profissionais"><span>E-mail profissional</span><span>LinkedIn</span></div>
+      </section>
+
+      <footer>Portfólio em construção — projetos, estudos e protótipos apresentados em seu estágio real.</footer>
+    </main>
+  </div>
+
+  <dialog id="project-dialog">
+    <button class="dialog-close" aria-label="Fechar">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
