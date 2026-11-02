@@ -29,7 +29,7 @@
       </label>
 
       <div class="stats" aria-label="Resumo do portfólio">
-        <div><strong>4</strong><span>Projetos</span></div>
+        <div><strong>5</strong><span>Projetos</span></div>
         <div><strong>7</strong><span>Etapas</span></div>
       </div>
 
@@ -40,7 +40,7 @@
 
       <nav class="areas" aria-label="Filtrar projetos">
         <span class="nav-label">Área</span>
-        <button class="filter active" data-filter="todos"><span></span>Todos <b>4</b></button>
+        <button class="filter active" data-filter="todos"><span></span>Todos <b>5</b></button>
         <button class="filter" data-filter="educacao"><span></span>Educação <b>1</b></button>
         <button class="filter" data-filter="ia"><span></span>IA <b>2</b></button>
         <button class="filter" data-filter="mobile"><span></span>Mobile <b>3</b></button>
@@ -115,7 +115,7 @@
       <section id="projetos" class="projects-section">
         <div class="section-heading">
           <div><span class="kicker">PROJETOS E EXPERIMENTOS</span><h2>O que estou construindo</h2></div>
-          <p id="result-count">4 projetos encontrados</p>
+          <p id="result-count">5 projetos encontrados</p>
         </div>
 
         <div class="project-grid" id="project-grid">
@@ -135,6 +135,12 @@
             <div class="card-art art-mobile" aria-hidden="true"><span>MOBILE</span><i></i></div>
             <div class="card-overlay"></div>
             <div class="card-copy"><span class="status">PROTÓTIPOS</span><h3>Experiências Android</h3><p>Fluxos, telas e versões funcionais construídas e testadas pelo celular.</p><div class="tags"><span>Mobile</span><span>Protótipo</span></div><button class="open-project" data-project="mobile">Explorar <span>↗</span></button></div>
+          </article>
+
+          <article class="project-card" data-tags="mobile android ux streaming tiktok axj live">
+            <div class="card-art art-axj-live" aria-hidden="true"><img src="assets/axj-live/01-painel.png" alt=""><span>AXJ LIVE</span><i></i></div>
+            <div class="card-overlay"></div>
+            <div class="card-copy"><span class="status">EM EVOLUÇÃO</span><h3>AXJ Live</h3><p>Um app Android para organizar recursos e controles de transmissões ao vivo.</p><div class="tags"><span>Android</span><span>Ao vivo</span></div><button class="open-project" data-project="axjLive">Explorar <span>↗</span></button></div>
           </article>
 
           <article class="project-card" data-tags="ux produto ia pesquisa estudos visual">
@@ -224,6 +230,11 @@
   <dialog id="project-dialog">
     <button class="dialog-close" aria-label="Fechar">×</button>
     <div id="dialog-content"></div>
+  </dialog>
+  <dialog id="image-dialog" class="image-dialog" aria-label="Captura do AXJ Live ampliada">
+    <button class="dialog-close" aria-label="Fechar imagem">×</button>
+    <img id="image-preview" alt="">
+    <p id="image-caption"></p>
   </dialog>
   <script src="app.js"></script>
 </body>
