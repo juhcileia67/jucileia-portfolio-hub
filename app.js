@@ -1,17 +1,280 @@
 const projects = {
-  learn: { kicker: 'PROJETO PRINCIPAL · EM DESENVOLVIMENTO', title: 'Learn Educação', lead: 'Uma proposta de ecossistema conectado entre aluno, professor, instituição e uma assistente educacional com IA.', items: [['Problema', 'Explorar uma experiência educacional séria sem parecer pesada ou distante para o aluno.'], ['Direção', 'Usar tecnologia como apoio ao professor e ao aprendizado, sem substituir o processo pedagógico.'], ['O que já existe', 'Protótipos Android, conceitos de site e estudos de fluxos para aluno e professor.'], ['Próximo passo', 'Escolher o núcleo de um primeiro piloto e buscar feedback de pessoas reais.']] },
-  axia: { kicker: 'CONCEITO · IA EDUCACIONAL', title: 'AXIA', lead: 'Mais do que um chat: uma ideia de apoio contextual que explica, orienta e ajuda a organizar o estudo.', items: [['Princípio', 'Ajudar o aluno a chegar à resposta, sem eliminar o processo de aprendizagem.'], ['Possibilidades', 'Explicações adaptadas, revisão, planos de estudo e ajuda contextual.'], ['Apoio ao professor', 'Leitura de dificuldades recorrentes e sugestões de reforço ainda em exploração.'], ['Cuidados', 'Privacidade, segurança e limites claros precisam fazer parte da solução.']] },
-  mobile: { kicker: 'EXPERIMENTAÇÃO · MOBILE', title: 'Experiências Android', lead: 'Protótipos criados para entender como ideias de produto funcionam em telas, fluxos e uso real no celular.', items: [['Formato', 'Versões visuais e funcionais construídas com ferramentas acessíveis pelo celular.'], ['Foco', 'Navegação, clareza, hierarquia visual e conexão entre etapas.'], ['Processo', 'Criar, comparar, ajustar e testar novas versões.'], ['Estágio', 'Algumas partes funcionam; outras são estudos e hipóteses de interface.']] },
-  axjLive: { kicker: 'PROTÓTIPO ANDROID · EM EVOLUÇÃO', title: 'AXJ Live', lead: 'Aplicativo Android para organizar recursos de live em um único lugar: Studio de operações, biblioteca de reações, áudio, personalização e controles flutuantes.', items: [['Formato', 'Aplicativo Android em evolução, apresentado aqui por capturas de tela.'], ['Recursos visíveis', 'Studio de operações, biblioteca de reações, ajustes de áudio e personalização visual.'], ['Controles flutuantes', 'A interface inclui opções de painel e overlay flutuante.'], ['TikTok', 'A tela mostra um fluxo para conectar ao TikTok; nas capturas selecionadas, o estado aparece offline.']], gallery: [['assets/axj-live/01-painel.png', 'Painel inicial', 'Tela inicial do AXJ Live com atalhos e opção de overlay flutuante.'], ['assets/axj-live/02-studio.png', 'Studio de operações', 'Painel de operação de live com atalhos para mensagens, reações e outros recursos.'], ['assets/axj-live/03-reacoes.png', 'Biblioteca de reações', 'Biblioteca visual de figurinhas e reações organizadas por categorias.'], ['assets/axj-live/04-personalizacao.png', 'Personalização visual', 'Tela de opções de personalização de cores e aparência do Studio.'], ['assets/axj-live/05-audio.png', 'Áudio e voz', 'Ajustes de som, narração e efeitos para a experiência do app e da bolha.']] },
-  studies: { kicker: 'LABORATÓRIO · PESQUISA E UX', title: 'Estudos de produto e UX', lead: 'Um espaço para investigar referências, comparar alternativas e aprender sem transformar todo teste em produto final.', items: [['Pesquisa', 'Comparação de soluções e observação de padrões de mercado.'], ['Exploração visual', 'Variações de identidade, composição e organização de interfaces.'], ['Produto', 'Hipóteses sobre problemas, públicos e caminhos possíveis.'], ['Aprendizado', 'Cada experimento ajuda a escolher o que manter, ajustar ou descartar.']] },
-  student: { kicker: 'LEARN · EXPERIÊNCIA DO ALUNO', title: 'Aprender percebendo a própria evolução', lead: 'O aluno entra com um código de turma e encontra uma experiência de estudo conectada ao seu contexto.', items: [['Experiência', 'Atividades, matérias, agenda, progresso, plano de estudos e histórico.'], ['AXIA', 'Ajuda contextual para explicar, dar pistas e organizar o estudo.'], ['Conquistas', 'Incentivos individuais, sem criar competição entre estudantes.'], ['Princípio', 'A mensagem principal é simples: “Eu evoluí.”']] },
-  teacher: { kicker: 'LEARN · EXPERIÊNCIA DO PROFESSOR', title: 'Apoiar o professor sem aumentar o trabalho', lead: 'O professor acompanha o que acontece nas turmas e encontra sinais úteis para decidir quando e como intervir.', items: [['Acompanhamento', 'Turmas, alunos, atividades, entregas, progresso e dificuldades.'], ['Adaptação', 'Uma atividade pode manter o mesmo objetivo e oferecer apoios diferentes.'], ['AXIA', 'Pode ajudar a organizar informações e sugerir caminhos.'], ['Princípio', 'A tecnologia deve ajudar o professor, não criar novas tarefas.']] },
-  school: { kicker: 'LEARN · INSTITUIÇÃO', title: 'Experiências conectadas à realidade da escola', lead: 'A visão institucional conecta alunos, professores e indicadores sem ignorar os sistemas que a escola já utiliza.', items: [['Visão', 'Turmas, professores, alunos, aprendizagem e dificuldades.'], ['Indicadores', 'Uso do sistema, progresso e relatórios.'], ['Integração', 'Evoluir sem exigir que tudo seja substituído de uma vez.'], ['Estágio', 'Hipótese de produto que ainda precisa ser validada com instituições reais.']] },
-  axiaDeep: { kicker: 'LEARN · AXIA', title: 'Uma IA pensada para ajudar a aprender', lead: 'A proposta da AXIA não é simplesmente responder perguntas, mas apoiar o processo de raciocínio.', items: [['Para o aluno', 'Explicar, dar pistas, fazer perguntas e dividir problemas em etapas.'], ['Personalização', 'Adaptar explicações, apoiar a organização e acompanhar dificuldades.'], ['Para o professor', 'Organizar informações, identificar padrões e sugerir caminhos.'], ['Limite importante', 'Evitar entregar respostas prontas e preservar o papel humano na educação.']] },
-  product: { kicker: 'APTIDÕES · PRODUTO', title: 'Do problema à visão do todo', lead: 'Habilidades desenvolvidas enquanto transformo necessidades em experiências e protótipos.', items: [['Visão de produto', 'Transformar um problema em uma ideia de produto e conectar suas partes.'], ['Pensamento sistêmico', 'Enxergar relações entre usuário, instituição, tecnologia e experiência.'], ['Criatividade aplicada', 'Gerar soluções e variações a partir de problemas reais.']] },
-  experience: { kicker: 'APTIDÕES · EXPERIÊNCIA', title: 'Como isso será vivido por quem usa?', lead: 'Meu olhar combina clareza, coerência visual e atenção ao uso real.', items: [['UX intuitivo', 'Perceber quando uma tela, fluxo ou função não está clara ou agradável.'], ['Sensibilidade visual', 'Composição, identidade, imagens, vídeos e apresentação.'], ['Comunicação visual', 'Apresentar ideias de forma clara, coerente e interessante.'], ['Foco no usuário', 'Partir de como a experiência será vivida, não apenas de como a função opera.']] },
-  execution: { kicker: 'APTIDÕES · EXECUÇÃO', title: 'Uma ideia precisa ganhar forma', lead: 'Uso ferramentas acessíveis para aproximar a execução daquilo que imaginei.', items: [['Prototipagem com IA', 'Transformar conceitos em protótipos e testar variações.'], ['Iteração', 'Identificar o que não funciona e reformular a solução.'], ['Persistência', 'Continuar testando alternativas até tornar a ideia demonstrável.']] },
-  connections: { kicker: 'APTIDÕES · CONEXÕES', title: 'Observar atritos e imaginar possibilidades', lead: 'Tenho facilidade para perceber relações e caminhos que ainda não estão óbvios.', items: [['Identificação de problemas', 'Perceber atritos em experiências existentes.'], ['Conexão de ideias', 'Juntar conceitos separados e imaginar uma experiência maior.'], ['Curiosidade tecnológica', 'Explorar ferramentas e plataformas para descobrir possibilidades.']] }
+  "learn": {
+    "kicker": "LEARN EDUCAÇÃO + AXIA · EM DESENVOLVIMENTO",
+    "title": "Learn Educação + AXIA",
+    "lead": "Começou com o Learner, uma experiência de cursos, e cresceu para um ecossistema de aprendizagem.",
+    "items": [
+      [
+        "Origem",
+        "O Learner começou como uma experiência de cursos."
+      ],
+      [
+        "Evolução",
+        "Surgiram Learn Aluno, Learn Professor e a Plataforma Learn."
+      ],
+      [
+        "AXIA",
+        "A assistente conecta a jornada de aprendizagem."
+      ],
+      [
+        "Estágio",
+        "Já existem protótipos e versões funcionais; algumas etapas dependem de recursos e serviços."
+      ]
+    ]
+  },
+  "axia": {
+    "kicker": "INTELIGÊNCIA ARTIFICIAL · LEARN",
+    "title": "AXIA",
+    "lead": "Uma assistente que acompanha a jornada de aprendizagem.",
+    "items": [
+      [
+        "Propósito",
+        "Apoiar, explicar e dar pistas sem simplesmente entregar respostas prontas."
+      ],
+      [
+        "Projeto",
+        "Faz parte do ecossistema Learn Educação."
+      ],
+      [
+        "Processo",
+        "As funções são testadas e revistas conforme o projeto evolui."
+      ],
+      [
+        "Estágio",
+        "Uma parte do projeto em desenvolvimento."
+      ]
+    ]
+  },
+  "mobile": {
+    "kicker": "ANDROID · VERSÃO FUNCIONAL",
+    "title": "Axis Live",
+    "lead": "Eu faço lives de jogos pelo celular e queria interagir com as pessoas sem sair do jogo.",
+    "items": [
+      [
+        "Origem",
+        "Comecei testando uma bolha flutuante."
+      ],
+      [
+        "Resultado",
+        "A ideia virou um aplicativo Android funcional."
+      ],
+      [
+        "Recursos",
+        "Mensagens, reações, perguntas, voz e eventos do TikTok."
+      ],
+      [
+        "Testes",
+        "As funções mudam conforme o uso nas próprias lives."
+      ]
+    ]
+  },
+  "studies": {
+    "kicker": "IDENTIDADE · CRIAÇÃO",
+    "title": "AXJ Creative",
+    "lead": "AXJ vem de Axis Ju. É uma assinatura para o que eu crio.",
+    "items": [
+      [
+        "O que reúne",
+        "Aplicativos, IA, educação, games e interfaces."
+      ],
+      [
+        "Por que existe",
+        "Para dar identidade aos projetos que estou construindo."
+      ],
+      [
+        "Meu jeito",
+        "Curiosidade, testes e vontade de entender como as coisas funcionam."
+      ],
+      [
+        "Visão",
+        "Não é uma tentativa de parecer uma empresa enorme. É minha fase de criação."
+      ]
+    ]
+  },
+  "student": {
+    "kicker": "ANDROID · VERSÃO FUNCIONAL",
+    "title": "Axis Live",
+    "lead": "Eu faço lives de jogos pelo celular e queria interagir com as pessoas sem sair do jogo.",
+    "items": [
+      [
+        "Origem",
+        "Comecei testando uma bolha flutuante."
+      ],
+      [
+        "Resultado",
+        "A ideia virou um aplicativo Android funcional."
+      ],
+      [
+        "Recursos",
+        "Mensagens, reações, perguntas, voz e eventos do TikTok."
+      ],
+      [
+        "Testes",
+        "As funções mudam conforme o uso nas próprias lives."
+      ]
+    ]
+  },
+  "teacher": {
+    "kicker": "LEARN EDUCAÇÃO + AXIA · EM DESENVOLVIMENTO",
+    "title": "Learn Educação + AXIA",
+    "lead": "Começou com o Learner, uma experiência de cursos, e cresceu para um ecossistema de aprendizagem.",
+    "items": [
+      [
+        "Origem",
+        "O Learner começou como uma experiência de cursos."
+      ],
+      [
+        "Evolução",
+        "Surgiram Learn Aluno, Learn Professor e a Plataforma Learn."
+      ],
+      [
+        "AXIA",
+        "A assistente conecta a jornada de aprendizagem."
+      ],
+      [
+        "Estágio",
+        "Já existem protótipos e versões funcionais; algumas etapas dependem de recursos e serviços."
+      ]
+    ]
+  },
+  "school": {
+    "kicker": "INTELIGÊNCIA ARTIFICIAL · LEARN",
+    "title": "AXIA",
+    "lead": "Uma assistente que acompanha a jornada de aprendizagem.",
+    "items": [
+      [
+        "Propósito",
+        "Apoiar, explicar e dar pistas sem simplesmente entregar respostas prontas."
+      ],
+      [
+        "Projeto",
+        "Faz parte do ecossistema Learn Educação."
+      ],
+      [
+        "Processo",
+        "As funções são testadas e revistas conforme o projeto evolui."
+      ],
+      [
+        "Estágio",
+        "Uma parte do projeto em desenvolvimento."
+      ]
+    ]
+  },
+  "axiaDeep": {
+    "kicker": "INTELIGÊNCIA ARTIFICIAL · LEARN",
+    "title": "AXIA",
+    "lead": "Uma assistente que acompanha a jornada de aprendizagem.",
+    "items": [
+      [
+        "Propósito",
+        "Apoiar, explicar e dar pistas sem simplesmente entregar respostas prontas."
+      ],
+      [
+        "Projeto",
+        "Faz parte do ecossistema Learn Educação."
+      ],
+      [
+        "Processo",
+        "As funções são testadas e revistas conforme o projeto evolui."
+      ],
+      [
+        "Estágio",
+        "Uma parte do projeto em desenvolvimento."
+      ]
+    ]
+  },
+  "product": {
+    "kicker": "IDENTIDADE · CRIAÇÃO",
+    "title": "AXJ Creative",
+    "lead": "AXJ vem de Axis Ju. É uma assinatura para o que eu crio.",
+    "items": [
+      [
+        "O que reúne",
+        "Aplicativos, IA, educação, games e interfaces."
+      ],
+      [
+        "Por que existe",
+        "Para dar identidade aos projetos que estou construindo."
+      ],
+      [
+        "Meu jeito",
+        "Curiosidade, testes e vontade de entender como as coisas funcionam."
+      ],
+      [
+        "Visão",
+        "Não é uma tentativa de parecer uma empresa enorme. É minha fase de criação."
+      ]
+    ]
+  },
+  "experience": {
+    "kicker": "IDENTIDADE · CRIAÇÃO",
+    "title": "AXJ Creative",
+    "lead": "AXJ vem de Axis Ju. É uma assinatura para o que eu crio.",
+    "items": [
+      [
+        "O que reúne",
+        "Aplicativos, IA, educação, games e interfaces."
+      ],
+      [
+        "Por que existe",
+        "Para dar identidade aos projetos que estou construindo."
+      ],
+      [
+        "Meu jeito",
+        "Curiosidade, testes e vontade de entender como as coisas funcionam."
+      ],
+      [
+        "Visão",
+        "Não é uma tentativa de parecer uma empresa enorme. É minha fase de criação."
+      ]
+    ]
+  },
+  "execution": {
+    "kicker": "ANDROID · VERSÃO FUNCIONAL",
+    "title": "Axis Live",
+    "lead": "Eu faço lives de jogos pelo celular e queria interagir com as pessoas sem sair do jogo.",
+    "items": [
+      [
+        "Origem",
+        "Comecei testando uma bolha flutuante."
+      ],
+      [
+        "Resultado",
+        "A ideia virou um aplicativo Android funcional."
+      ],
+      [
+        "Recursos",
+        "Mensagens, reações, perguntas, voz e eventos do TikTok."
+      ],
+      [
+        "Testes",
+        "As funções mudam conforme o uso nas próprias lives."
+      ]
+    ]
+  },
+  "connections": {
+    "kicker": "IDENTIDADE · CRIAÇÃO",
+    "title": "AXJ Creative",
+    "lead": "AXJ vem de Axis Ju. É uma assinatura para o que eu crio.",
+    "items": [
+      [
+        "O que reúne",
+        "Aplicativos, IA, educação, games e interfaces."
+      ],
+      [
+        "Por que existe",
+        "Para dar identidade aos projetos que estou construindo."
+      ],
+      [
+        "Meu jeito",
+        "Curiosidade, testes e vontade de entender como as coisas funcionam."
+      ],
+      [
+        "Visão",
+        "Não é uma tentativa de parecer uma empresa enorme. É minha fase de criação."
+      ]
+    ]
+  }
 };
 
 const cards = [...document.querySelectorAll('.project-card')];
@@ -72,10 +335,11 @@ dialog.addEventListener('click', event => { if (event.target === dialog) dialog.
 dialogContent.addEventListener('click', event => {
   const button = event.target.closest('.gallery-open');
   if (!button) return;
+  if (!imageDialog || !imagePreview || !imageCaption) return;
   imagePreview.src = button.dataset.full;
   imagePreview.alt = button.dataset.alt;
   imageCaption.textContent = button.dataset.caption;
   imageDialog.showModal();
 });
-imageDialog.querySelector('.dialog-close').addEventListener('click', () => imageDialog.close());
-imageDialog.addEventListener('click', event => { if (event.target === imageDialog) imageDialog.close(); });
+imageDialog?.querySelector('.dialog-close')?.addEventListener('click', () => imageDialog.close());
+imageDialog?.addEventListener('click', event => { if (event.target === imageDialog) imageDialog.close(); });
