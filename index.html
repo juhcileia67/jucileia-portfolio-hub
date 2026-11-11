@@ -37,6 +37,32 @@ a:focus-visible,button:focus-visible,[role=button]:focus-visible{outline:3px sol
 .project-copy{padding:24px}
 .story,.opportunity,.ai,.letter{padding:25px 22px}
 }
+</style><style>
+/* Interações do portfólio: cartões vivos, leitura em foco e acessibilidade */
+:root{--motion-ease:cubic-bezier(.2,.75,.2,1)}
+.project,.skill,.ai,.opportunity,.letter,.story-entry{position:relative;transition:transform .38s var(--motion-ease),box-shadow .38s ease,border-color .3s ease;will-change:transform}
+.project:hover,.skill:hover,.ai:hover,.opportunity:hover,.letter:hover,.story-entry:hover{transform:translateY(-5px);border-color:rgba(163,141,255,.65);box-shadow:0 24px 60px rgba(46,29,119,.26)}
+.project:active,.skill:active,.ai:active,.opportunity:active,.letter:active,.story-entry:active{transform:scale(.992)}
+.project[data-card-action],.skill[data-card-action],.ai[data-card-action],.opportunity[data-card-action],.letter[data-card-action]{cursor:pointer}
+[data-card-action]:focus-visible{outline:3px solid #b2a1ff;outline-offset:4px}
+.card-action-hint{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.01em;color:#c3b5ff;margin-top:12px}
+.card-action-hint::after{content:'↗';display:inline-block;transition:transform .25s}
+[data-card-action]:hover .card-action-hint::after{transform:translate(3px,-3px)}
+.project-img{transition:transform .7s var(--motion-ease),filter .5s ease}
+.project:hover .project-img{filter:brightness(1.13)}
+.read-overlay{position:fixed;inset:0;z-index:1000;background:rgba(3,3,16,.78);backdrop-filter:blur(14px);display:grid;place-items:center;padding:18px;opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s}
+.read-overlay.is-open{opacity:1;visibility:visible}
+.read-panel{position:relative;width:min(750px,100%);max-height:min(84vh,900px);overflow:auto;overscroll-behavior:contain;border-radius:26px;padding:clamp(24px,5vw,46px);background:linear-gradient(150deg,#251b4c,#0b102b 70%);border:1px solid rgba(170,148,255,.42);box-shadow:0 35px 100px rgba(0,0,0,.55);transform:translateY(22px) scale(.97);transition:transform .32s var(--motion-ease)}
+.read-overlay.is-open .read-panel{transform:translateY(0) scale(1)}
+.read-panel h2{font-size:clamp(25px,4vw,38px);line-height:1.15;margin:10px 48px 20px 0}
+.read-panel p{line-height:1.75;color:#e2dcf5;font-size:clamp(16px,2vw,18px)}
+.read-panel a{color:#c4b3ff}
+.read-close{position:sticky;top:0;float:right;border:1px solid #7264a5;background:#211c40;color:white;border-radius:50%;width:42px;height:42px;font-size:25px;cursor:pointer;z-index:2}
+.read-close:hover{background:#433271}
+.reveal-on-scroll{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s var(--motion-ease)}
+.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+@media(hover:none){.project:hover,.skill:hover,.ai:hover,.opportunity:hover,.letter:hover,.story-entry:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal-on-scroll{opacity:1;transform:none}}
 </style></head><body>
 <div class="wrap"><header class="nav glass"><div class="brand">AXJ <span></span> · CREATIVE</div><nav class="menu" id="menu"><a href="#projetos">Projetos</a><a href="#historia">Sobre mim</a><a href="#oportunidades">Oportunidades</a><a href="#ia">IA no processo</a><a href="#contato">Contato</a></nav><button class="mobile" onclick="menu.classList.toggle('open')"></button></header>
 <section class="hero glass"><div class="hero-copy"><div class="eyebrow">Curiosidade · testes · projetos</div><h1>Oi, eu sou a Ju. </h1><p>Sou curiosa. Do tipo que vê alguma coisa, vai bisbilhotar para entender como funciona e, quando percebe, já está tentando fazer uma versão dela.</p><p>Foi assim que comecei a mexer com aplicativos, IA, interfaces e protótipos — mesmo sem vir da tecnologia e sem saber programar.</p><p>Este portfólio é onde eu mostro o que saiu dessas curiosidades: o que já consegui construir, o que testei e o que ainda estou tentando entender.</p><a class="button" href="#projetos">Ver onde fui me meter ↓</a><a class="story-cta" href="#historia">Essa história começa bem antes da tecnologia →</a></div><div class="hero-art"></div></section>
@@ -71,4 +97,25 @@ a:focus-visible,button:focus-visible,[role=button]:focus-visible{outline:3px sol
 <div class="story-card"><div class="story-num">10 · AXJ CREATIVE</div><h3>Uma assinatura para o que eu crio.</h3><p>AXJ vem de Axis Ju. A AXJ Creative nasceu para reunir e assinar essa fase de criação — aplicativos, IA, educação, games, interfaces e qualquer outra curiosidade que resolva ir longe demais. Não é uma tentativa de parecer uma empresa enorme. É a identidade dos projetos que estou construindo.</p></div>
 <div class="story-card"><div class="story-num">11 · AINDA SOU UMA CURIOSA</div><h3>E ainda estou descobrindo onde isso vai dar.</h3><p>Eu não tenho uma trajetória tradicional em tecnologia e ainda existe muita coisa que não sei. Estou procurando oportunidades, aprendendo e construindo enquanto avanço. Não quero apagar a Ju da beleza, dos desenhos, dos games ou das lives para caber numa profissão nova.</p><p>É por isso que este espaço se chama <strong>Diário de uma Curiosa</strong>. No fim, foi a curiosidade que me trouxe até aqui.</p></div>
 <div class="story-dots" id="storyDots"></div><div class="story-nav"><button onclick="storyPrev()">← Anterior</button><button onclick="storyNext()">Próximo →</button></div></div></div>
-<script>let storyIndex=0;const storyCards=[...document.querySelectorAll(".story-card")];const dots=document.getElementById("storyDots");storyCards.forEach((_,i)=>{const d=document.createElement("span");d.className="story-dot"+(i===0?" active":"");dots.appendChild(d)});function renderStory(){storyCards.forEach((c,i)=>c.classList.toggle("active",i===storyIndex));[...dots.children].forEach((d,i)=>d.classList.toggle("active",i===storyIndex))}function openStory(){document.getElementById("storyModal").classList.add("open");document.body.style.overflow="hidden"}function closeStory(){document.getElementById("storyModal").classList.remove("open");document.body.style.overflow=""}function storyNext(){storyIndex=(storyIndex+1)%storyCards.length;renderStory()}function storyPrev(){storyIndex=(storyIndex-1+storyCards.length)%storyCards.length;renderStory()}document.addEventListener("keydown",e=>{if(e.key==="Escape")closeStory();if(document.getElementById("storyModal").classList.contains("open")){if(e.key==="ArrowRight")storyNext();if(e.key==="ArrowLeft")storyPrev()}});document.querySelectorAll('.menu a').forEach(a=>a.onclick=()=>menu.classList.remove('open'))</script></body></html>
+<script>let storyIndex=0;const storyCards=[...document.querySelectorAll(".story-card")];const dots=document.getElementById("storyDots");storyCards.forEach((_,i)=>{const d=document.createElement("span");d.className="story-dot"+(i===0?" active":"");dots.appendChild(d)});function renderStory(){storyCards.forEach((c,i)=>c.classList.toggle("active",i===storyIndex));[...dots.children].forEach((d,i)=>d.classList.toggle("active",i===storyIndex))}function openStory(){document.getElementById("storyModal").classList.add("open");document.body.style.overflow="hidden"}function closeStory(){document.getElementById("storyModal").classList.remove("open");document.body.style.overflow=""}function storyNext(){storyIndex=(storyIndex+1)%storyCards.length;renderStory()}function storyPrev(){storyIndex=(storyIndex-1+storyCards.length)%storyCards.length;renderStory()}document.addEventListener("keydown",e=>{if(e.key==="Escape")closeStory();if(document.getElementById("storyModal").classList.contains("open")){if(e.key==="ArrowRight")storyNext();if(e.key==="ArrowLeft")storyPrev()}});document.querySelectorAll('.menu a').forEach(a=>a.onclick=()=>menu.classList.remove('open'))</script>
+<script>
+(()=>{'use strict';
+const targets=document.querySelectorAll('.project,.skill,.ai,.opportunity,.letter');
+const overlay=document.createElement('div');overlay.className='read-overlay';overlay.id='readOverlay';
+overlay.setAttribute('aria-hidden','true');
+overlay.innerHTML='<div class="read-panel" role="dialog" aria-modal="true" aria-labelledby="readTitle" tabindex="-1"><button class="read-close" type="button" aria-label="Fechar leitura">×</button><div id="readContent"></div></div>';
+document.body.appendChild(overlay);
+const panel=overlay.querySelector('.read-panel'),close=overlay.querySelector('.read-close'),body=overlay.querySelector('#readContent');
+let lastFocus=null;
+function openCard(card){lastFocus=document.activeElement;const title=card.querySelector('h2,h3');if(!title)return;const clone=card.cloneNode(true);clone.querySelectorAll('.card-action-hint,.project-img').forEach(n=>n.remove());clone.removeAttribute('data-card-action');clone.removeAttribute('tabindex');clone.removeAttribute('role');clone.removeAttribute('class');clone.querySelectorAll('a').forEach(a=>a.setAttribute('tabindex','0'));body.replaceChildren();const heading=document.createElement('h2');heading.id='readTitle';heading.textContent=title.textContent;body.appendChild(heading);clone.querySelector('h2,h3')?.remove();while(clone.firstChild)body.appendChild(clone.firstChild);overlay.classList.add('is-open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';panel.scrollTop=0;close.focus();}
+function closeCard(){overlay.classList.remove('is-open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';lastFocus?.focus();}
+targets.forEach(card=>{const link=card.classList.contains('project')?card.querySelector('.project-copy a[href]'):null;card.dataset.cardAction=link?'navigate':'read';card.tabIndex=0;card.setAttribute('role','button');const hint=document.createElement('span');hint.className='card-action-hint';hint.textContent=link?'Abrir projeto':'Toque para ler';(card.querySelector('.project-copy')||card).appendChild(hint);
+const activate=()=>{if(link){window.location.href=link.href}else openCard(card)};
+card.addEventListener('click',e=>{if(e.target.closest('a,button'))return;activate()});
+card.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&!e.target.closest('a,button')){e.preventDefault();activate()}});
+});
+close.addEventListener('click',closeCard);overlay.addEventListener('click',e=>{if(e.target===overlay)closeCard()});
+document.addEventListener('keydown',e=>{if(!overlay.classList.contains('is-open'))return;if(e.key==='Escape'){e.stopImmediatePropagation();closeCard()}if(e.key==='Tab'){const focusable=[close,...body.querySelectorAll('a[href],button:not([disabled])')];const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}},true);
+const sections=document.querySelectorAll('.section,.hero,.contact');if('IntersectionObserver'in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.06,rootMargin:'0px 0px 50px 0px'});sections.forEach(s=>{s.classList.add('reveal-on-scroll');observer.observe(s)})}
+})();
+</script></body></html>
