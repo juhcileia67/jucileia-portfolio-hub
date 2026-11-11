@@ -179,6 +179,22 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
 @keyframes chapterIn{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:translateX(0)}}
 @media(max-width:760px){.read-panel{max-height:94dvh;border-radius:22px;padding:26px 22px}.read-panel h2{font-size:36px}.story-shell{max-height:94dvh;padding:27px 22px}.story-nav button{padding:12px 15px}}
 @media(prefers-reduced-motion:reduce){.story-card.active{animation:none}}
+</style><style>
+/* R4 — detalhes autorais em vez de ícones genéricos */
+.hero h1:after{content:none!important}
+.hero-copy:before{content:"";position:absolute;left:clamp(24px,4vw,60px);top:30px;width:140px;height:1px;background:linear-gradient(90deg,#a3a4ff88,transparent)}
+.hero-copy{position:relative}
+.skill:after{content:""!important;top:20px;right:20px;width:66px;height:66px;border-radius:19px;border:1px solid #a1a0f14a;background:linear-gradient(145deg,#a19cff20,#93dfff0a);transform:rotate(-10deg)}
+.skill:nth-child(2):after{border-radius:50%;transform:rotate(0deg)}
+.skill:nth-child(3):after{border-radius:9px 30px 9px 30px;transform:rotate(10deg)}
+.skill:nth-child(4):after{border-radius:50% 8px 50% 8px}
+.skill:hover:after{transform:rotate(0deg) scale(1.08);border-color:#b5adff99}
+.axj-float-nav a{font-size:0;position:relative}
+.axj-float-nav a:before{content:"";display:block;width:13px;height:13px;border-top:2px solid #e4dcff;border-left:2px solid #e4dcff;transform:translateY(4px) rotate(45deg)}
+.axj-float-nav a:last-child:before{width:18px;height:13px;border:2px solid #e4dcff;border-radius:3px;transform:none}
+.axj-float-nav a:last-child:after{content:"";position:absolute;width:11px;height:11px;border-right:2px solid #e4dcff;border-bottom:2px solid #e4dcff;transform:translateY(-4px) rotate(45deg)}
+.project .card-action-hint{border-radius:12px;padding:12px 16px;background:linear-gradient(90deg,#8174e92b,#5ba4e71a)}
+@media(max-width:760px){.hero-copy:before{top:12px;left:24px;width:90px}}
 </style></head><body>
 <div class="wrap"><header class="nav glass"><div class="brand">AXJ <span></span> · CREATIVE</div><nav class="menu" id="menu"><a href="#projetos">Projetos</a><a href="#historia">Sobre mim</a><a href="#oportunidades">Oportunidades</a><a href="#ia">IA no processo</a><a href="#contato">Contato</a></nav><button class="mobile" onclick="menu.classList.toggle('open')"></button></header>
 <section class="hero glass"><div class="hero-copy"><div class="eyebrow">Curiosidade · testes · projetos</div><h1>Oi, eu sou a Ju. </h1><p>Sou curiosa. Do tipo que vê alguma coisa, vai bisbilhotar para entender como funciona e, quando percebe, já está tentando fazer uma versão dela.</p><p>Foi assim que comecei a mexer com aplicativos, IA, interfaces e protótipos — mesmo sem vir da tecnologia e sem saber programar.</p><p>Este portfólio é onde eu mostro o que saiu dessas curiosidades: o que já consegui construir, o que testei e o que ainda estou tentando entender.</p><a class="button" href="#projetos">Ver onde fui me meter ↓</a><a class="story-cta" href="#historia">Essa história começa bem antes da tecnologia →</a></div><div class="hero-art"></div></section>
