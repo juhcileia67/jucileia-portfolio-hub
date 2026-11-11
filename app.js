@@ -368,3 +368,29 @@ imageDialog?.addEventListener('click', event => { if (event.target === imageDial
     });
   });
 })();
+
+/* Navegação por telas, sem rolagem por âncoras */
+(() => {
+  const screens=[...document.querySelectorAll('.axj-screen')];
+  const valid=new Set(screens.map(x=>x.dataset.screen));
+  const rail=[...document.querySelectorAll('.rail-item')];
+  const topbar=document.querySelector('.topbar');
+  function go(screen, updateHash=true){
+    if(!valid.has(screen)) screen='inicio';
+    screens.forEach(x=>{x.hidden=x.dataset.screen!==screen});
+    rail.forEach(x=>{const active=x.dataset.go===screen;x.classList.toggle('active',active);if(active)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});
+    document.querySelectorAll('.top-search,.view-toggle,.side-search,.areas').forEach(x=>{x.hidden=screen!=='projetos'});
+    if(topbar){const title=topbar.querySelector('h1');const sub=topbar.querySelector('h1 + p');const names={inicio:'Oi, eu sou a Ju',projetos:'Meus projetos',explorar:'Diário de uma Curiosa',contato:'Vamos conversar'};if(title)title.innerHTML=names[screen]+'<span class="neon-dot">.</span>';if(sub)sub.textContent={inicio:'Curiosidade, games, aplicativos e ideias que resolvi tentar colocar em prática.',projetos:'Aplicativos, IA e ideias que estou construindo.',explorar:'Minha história, minhas descobertas e o que aprendi na prática.',contato:'Oportunidades, parcerias e novas conversas.'}[screen]}
+    if(updateHash)history.pushState({screen},'', '#'+screen);
+    window.scrollTo({top:0,behavior:'instant'});
+    document.querySelectorAll('.motion-reveal').forEach(el=>{if(!el.closest('[hidden]'))el.classList.add('motion-visible')});
+  }
+  document.querySelectorAll('[data-go],a[href^="#"]').forEach(el=>el.addEventListener('click',e=>{
+    const hash=(el.dataset.go||el.getAttribute('href')?.slice(1)||'');
+    const mapping={inicio:'inicio',projetos:'projetos',explorar:'explorar',trajetoria:'explorar',processo:'explorar',evolucao:'explorar',aptidoes:'explorar',contato:'contato'};
+    if(!mapping[hash])return;
+    e.preventDefault();go(mapping[hash]);
+  }));
+  window.addEventListener('popstate',()=>go(location.hash.slice(1),false));
+  go(location.hash.slice(1),false);
+})();
