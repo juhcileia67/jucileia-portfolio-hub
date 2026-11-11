@@ -63,6 +63,95 @@ a:focus-visible,button:focus-visible,[role=button]:focus-visible{outline:3px sol
 .reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
 @media(hover:none){.project:hover,.skill:hover,.ai:hover,.opportunity:hover,.letter:hover,.story-entry:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal-on-scroll{opacity:1;transform:none}}
+</style><style>
+/* AXJ Creative — visual editorial interativo R2 */
+:root{--violet:#a68cff;--ice:#86d8ff;--deep:#07091c}
+html{scroll-padding-top:100px}
+body{background:#050716;background-image:radial-gradient(ellipse 60% 30% at 85% 2%,#5545b533,transparent),radial-gradient(ellipse 40% 24% at 4% 42%,#166c9b24,transparent),linear-gradient(180deg,#09091d,#050716 55%,#080617);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.18;background-image:linear-gradient(#9b91c90b 1px,transparent 1px),linear-gradient(90deg,#9b91c90b 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(180deg,#000,transparent 90%)}
+.wrap{position:relative;z-index:1;width:min(1260px,calc(100% - 40px))}
+.nav{top:12px;border-radius:18px;background:rgba(13,13,36,.78);border:1px solid #9388d03d;box-shadow:0 10px 40px #0005}
+.brand{letter-spacing:.07em}.brand span{color:#a78aff}
+.menu a{font-size:14px;transition:color .2s,background .2s}.menu a:hover{color:#a8ddff}
+.hero{min-height:620px;margin-top:26px;border-radius:30px;isolation:isolate;background:linear-gradient(130deg,#1b1741d9,#080c25 70%);border:1px solid #9d8ae84d;box-shadow:0 35px 100px #0007,0 0 90px #7b5cff12}
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 25% 15%,#9974ff25,transparent 42%);z-index:-1}
+.hero-copy{z-index:1;padding:clamp(30px,5vw,72px)}
+.hero h1{font-size:clamp(56px,7.5vw,106px);letter-spacing:-.065em;line-height:.98;max-width:650px;text-shadow:0 12px 40px #0006}
+.hero h1:after{content:"✦";display:inline-block;color:#a9a2ff;font-size:.42em;vertical-align:top;margin:0 0 0 12px;animation:starFloat 5s ease-in-out infinite}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;width:max-content;color:#c7b7ff;font-size:12px;border:1px solid #9388df55;background:#9c80ff13;border-radius:99px;padding:10px 15px;letter-spacing:.16em}
+.hero .eyebrow:before{content:"";width:7px;height:7px;background:#9ae7ff;border-radius:50%;box-shadow:0 0 15px #9ae7ff;animation:pulseDot 2.8s infinite}
+.hero p{font-size:clamp(16px,1.5vw,19px);color:#d3d1e6}
+.hero-art{background-color:transparent;min-height:500px;background-size:contain;background-position:center bottom;filter:drop-shadow(0 0 35px #7559d333)}
+.button{border:1px solid #b0a0ff7d;background:linear-gradient(115deg,#5a62d8,#9867ee);padding:15px 22px;border-radius:14px;box-shadow:0 10px 30px #6853cf35;transition:transform .25s,box-shadow .25s}
+.button:hover{transform:translateY(-3px);box-shadow:0 16px 38px #6853cf66}
+.section{padding:90px 0;position:relative}
+.section>.kicker{font-size:12px;letter-spacing:.23em;text-transform:uppercase;color:#9fd7ff;display:flex;align-items:center;gap:12px}
+.section>.kicker:before{content:"";width:24px;height:1px;background:#9fd7ff}
+.section>h2{font-size:clamp(36px,5.6vw,64px);line-height:1.07;letter-spacing:-.05em;max-width:890px}
+.intro{color:#bcbcd4}
+.projects{gap:28px}
+.project{border-radius:28px;min-height:390px;grid-template-columns:47% 53%;background:linear-gradient(120deg,#151638,#0b1029);border:1px solid #9484e94b;box-shadow:0 25px 60px #0005;isolation:isolate}
+.project:nth-child(even){grid-template-columns:53% 47%}
+.project:before,.skill:before,.ai:before,.story-entry:before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),#a58cff18,transparent 65%);opacity:0;transition:opacity .3s}
+.project:hover:before,.skill:hover:before,.ai:hover:before,.story-entry:hover:before{opacity:1}
+.project-img{position:relative;min-height:350px;background-color:#111431;background-size:contain!important;background-position:center!important;box-shadow:inset -20px 0 50px #06091860}
+.project-img:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0c102b44,transparent 35%);pointer-events:none}
+.project-copy{padding:clamp(28px,4vw,54px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.project h3{font-size:clamp(30px,3.6vw,46px);line-height:1.05;letter-spacing:-.04em}
+.project p{font-size:17px;color:#c9c8de}
+.tag{border:1px solid #a18cf075;background:#967aff15;color:#d5c7ff;letter-spacing:.06em;text-transform:uppercase;font-size:10px;padding:9px 12px}
+.project .link{display:inline-flex;margin-top:12px;color:#b8c8ff}
+.card-action-hint{margin-top:18px;padding:9px 12px;border-radius:10px;background:#9783f012;border:1px solid #9c8bf038;color:#cfc5ff}
+.skills{grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.skill{min-height:270px;border-radius:24px;padding:28px 23px 25px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:linear-gradient(160deg,#1c1a48,#10112b);border:1px solid #8c7ec04d}
+.skill:after{content:"✳";position:absolute;top:16px;right:23px;color:#a49aff44;font-size:66px;line-height:1;transition:transform .4s,color .4s}
+.skill:nth-child(2):after{content:"◇"}.skill:nth-child(3):after{content:"✦"}.skill:nth-child(4):after{content:"⌘"}
+.skill:hover:after{transform:rotate(18deg) scale(1.13);color:#a49aff88}
+.skill h3{font-size:21px;line-height:1.15;position:relative;z-index:1}
+.skill p{font-size:14px;position:relative;z-index:1;color:#c0c0d9}
+.story-entry{border-radius:30px;padding:clamp(32px,6vw,70px);background:radial-gradient(circle at 90% 25%,#a381ff24,transparent 40%),linear-gradient(130deg,#171437,#10112b);border:1px solid #9a83e866;overflow:hidden}
+.story-entry:after{content:"11 CAPÍTULOS";position:absolute;right:30px;bottom:25px;font-size:clamp(35px,6vw,88px);font-weight:800;letter-spacing:-.07em;color:#b4a2ff0f;pointer-events:none}
+.story-entry h2{max-width:680px;letter-spacing:-.05em}
+.story-cta{color:#b4dfff}
+.opportunity,.ai,.letter{border-radius:28px;background:linear-gradient(155deg,#161638,#0a0d24);border:1px solid #9182dd40;box-shadow:0 18px 55px #0003}
+.ai-grid{gap:24px}.ai h2{font-size:clamp(30px,3.5vw,44px);letter-spacing:-.045em}
+.letter:before{color:#aa8fff10;font-size:clamp(50px,9vw,130px);top:12px}
+.socials a{background:#a58fff0b;border:1px solid #a58fff55;transition:transform .2s,background .2s}.socials a:hover{transform:translateY(-3px);background:#a58fff22}
+.read-panel{border-radius:30px;background:linear-gradient(145deg,#201a48,#090e27);box-shadow:0 35px 110px #000b,0 0 70px #7c61ed30}
+.story-shell{border-radius:28px;background:linear-gradient(145deg,#211a47,#0b1028)}
+.axj-scroll-track{position:fixed;top:0;left:0;right:0;height:3px;z-index:9999;pointer-events:none;background:#ffffff08}
+.axj-scroll-bar{height:100%;width:0;background:linear-gradient(90deg,#7c7bff,#93e3ff);box-shadow:0 0 14px #8c9dff}
+.axj-float-nav{position:fixed;right:clamp(12px,3vw,32px);bottom:clamp(16px,3vw,30px);z-index:50;display:flex;flex-direction:column;gap:8px}
+.axj-float-nav a{width:46px;height:46px;border-radius:15px;background:#1b1a43e8;border:1px solid #a091ee77;color:#e4dcff;display:grid;place-items:center;text-decoration:none;font-size:22px;box-shadow:0 12px 35px #0006;backdrop-filter:blur(10px);transition:transform .25s,background .25s}
+.axj-float-nav a:hover{transform:translateY(-4px);background:#463a83}
+@keyframes starFloat{50%{transform:translateY(-10px) rotate(12deg);opacity:.6}}
+@keyframes pulseDot{50%{box-shadow:0 0 22px #9ae7ff;opacity:.55}}
+@media(min-width:761px) and (max-width:1020px){.skills{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:68px}}
+@media(max-width:760px){
+.wrap{width:calc(100% - 24px)}
+.nav{margin-top:10px;border-radius:15px}
+.hero{min-height:0;margin-top:15px;border-radius:23px}
+.hero-art{order:1;min-height:310px;height:310px;background-size:contain;background-position:center bottom}
+.hero-copy{order:2;padding:28px 23px 38px}
+.hero h1{font-size:clamp(48px,12vw,68px)}
+.hero .eyebrow{font-size:10px;letter-spacing:.09em}
+.hero p{font-size:16px}
+.section{padding:62px 0}
+.section>h2{font-size:clamp(35px,9vw,49px)}
+.project,.project:nth-child(even){border-radius:23px;display:flex;flex-direction:column}
+.project-img,.project.learn-card .project-img{min-height:245px;height:245px;background-size:contain!important;background-position:center!important}
+.project-copy{padding:26px 23px 29px}
+.project h3{font-size:32px}
+.project p{font-size:16px}
+.skills{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.skill{min-height:230px;padding:18px 14px;border-radius:18px}
+.skill h3{font-size:17px}.skill p{font-size:13px}.skill:after{font-size:43px;right:13px}
+.story-entry,.opportunity,.ai,.letter{border-radius:22px}
+.story-entry:after{font-size:40px;right:14px;bottom:12px}
+.axj-float-nav{right:12px;bottom:14px}.axj-float-nav a{width:40px;height:40px;border-radius:13px}
+}
+@media(max-width:380px){.skills{grid-template-columns:1fr}.skill{min-height:175px}}
+@media(prefers-reduced-motion:reduce){.hero h1:after,.hero .eyebrow:before{animation:none!important}}
 </style></head><body>
 <div class="wrap"><header class="nav glass"><div class="brand">AXJ <span></span> · CREATIVE</div><nav class="menu" id="menu"><a href="#projetos">Projetos</a><a href="#historia">Sobre mim</a><a href="#oportunidades">Oportunidades</a><a href="#ia">IA no processo</a><a href="#contato">Contato</a></nav><button class="mobile" onclick="menu.classList.toggle('open')"></button></header>
 <section class="hero glass"><div class="hero-copy"><div class="eyebrow">Curiosidade · testes · projetos</div><h1>Oi, eu sou a Ju. </h1><p>Sou curiosa. Do tipo que vê alguma coisa, vai bisbilhotar para entender como funciona e, quando percebe, já está tentando fazer uma versão dela.</p><p>Foi assim que comecei a mexer com aplicativos, IA, interfaces e protótipos — mesmo sem vir da tecnologia e sem saber programar.</p><p>Este portfólio é onde eu mostro o que saiu dessas curiosidades: o que já consegui construir, o que testei e o que ainda estou tentando entender.</p><a class="button" href="#projetos">Ver onde fui me meter ↓</a><a class="story-cta" href="#historia">Essa história começa bem antes da tecnologia →</a></div><div class="hero-art"></div></section>
@@ -117,5 +206,16 @@ card.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&!e.target
 close.addEventListener('click',closeCard);overlay.addEventListener('click',e=>{if(e.target===overlay)closeCard()});
 document.addEventListener('keydown',e=>{if(!overlay.classList.contains('is-open'))return;if(e.key==='Escape'){e.stopImmediatePropagation();closeCard()}if(e.key==='Tab'){const focusable=[close,...body.querySelectorAll('a[href],button:not([disabled])')];const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}},true);
 const sections=document.querySelectorAll('.section,.hero,.contact');if('IntersectionObserver'in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.06,rootMargin:'0px 0px 50px 0px'});sections.forEach(s=>{s.classList.add('reveal-on-scroll');observer.observe(s)})}
+})();
+</script><script>
+(()=>{'use strict';
+const track=document.createElement('div');track.className='axj-scroll-track';track.setAttribute('aria-hidden','true');track.innerHTML='<div class="axj-scroll-bar"></div>';document.body.appendChild(track);
+const bar=track.firstElementChild;
+let scheduled=false;function update(){const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?Math.min(100,scrollY/max*100):0)+'%';scheduled=false}
+addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(update)}},{passive:true});addEventListener('resize',update);update();
+const nav=document.createElement('div');nav.className='axj-float-nav';nav.innerHTML='<a href="#inicio" aria-label="Voltar ao início" title="Voltar ao início">↑</a><a href="#contato" aria-label="Ir para contato" title="Contato">✉</a>';document.body.appendChild(nav);
+const hero=document.querySelector('.hero');if(hero&&!hero.id)hero.id='inicio';
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){document.querySelectorAll('.project,.skill,.ai,.story-entry').forEach(card=>card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();card.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');card.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%')}))}
+const menuButton=document.querySelector('.mobile');if(menuButton){menuButton.setAttribute('aria-label','Abrir menu');menuButton.textContent='☰';menuButton.addEventListener('click',()=>{menuButton.textContent=document.querySelector('.menu')?.classList.contains('open')?'✕':'☰'})}
 })();
 </script></body></html>
