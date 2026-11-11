@@ -234,7 +234,70 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
 @keyframes axjMapIn{from{opacity:0;transform:scale(1.025)}to{opacity:1;transform:scale(1)}}
 @media(max-width:760px){.axj-map-inner{width:calc(100% - 26px);padding:28px 0 75px}.axj-map-head{margin-bottom:25px}.axj-map-head h2{font-size:clamp(47px,12vw,72px)}.axj-map-close{width:45px;height:45px;top:8px}.axj-map-grid{grid-template-columns:1fr;gap:11px}.axj-map-card,.axj-map-card:nth-child(1),.axj-map-card:nth-child(2),.axj-map-card:nth-child(5),.axj-map-card:nth-child(6){grid-column:1;min-height:200px;padding:23px}.axj-map-card strong{font-size:30px;margin:22px 0 8px}.axj-map-launch{left:12px;bottom:14px;padding:11px 14px}.axj-discover{border-radius:22px}.axj-map-foot{display:block}}
 @media(prefers-reduced-motion:reduce){.axj-map.open{animation:none}.axj-map-card{transition:none}}
-</style><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet"><style>body{font-family:'DM Sans',sans-serif}h1,h2,h3,.brand,.axj-map-card strong,.axj-map-head h2,.axj-discover h2,.project h3{font-family:'Syne',sans-serif;letter-spacing:-.055em}.hero h1{letter-spacing:-.075em}.axj-map-launch{font-family:'DM Sans',sans-serif}@media(max-width:760px){.hero h1{letter-spacing:-.075em}}</style></head><body>
+</style><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet"><style>body{font-family:'DM Sans',sans-serif}h1,h2,h3,.brand,.axj-map-card strong,.axj-map-head h2,.axj-discover h2,.project h3{font-family:'Syne',sans-serif;letter-spacing:-.055em}.hero h1{letter-spacing:-.075em}.axj-map-launch{font-family:'DM Sans',sans-serif}@media(max-width:760px){.hero h1{letter-spacing:-.075em}}</style><style>
+/* AXJ / STUDIO EDITION — immersive project portals */
+:root{--paper:#f2f0eb;--ink:#070811;--ultra:#9b8cff;--blueprint:#b5e4f3}
+body{background:#060710}
+body:before{opacity:.08}
+.hero{border-radius:0 36px 36px 36px;border-color:#b7a8ff55;background:radial-gradient(circle at 7% 6%,#6b5eac38,transparent 45%),#111129}
+.hero h1{font-family:Syne,sans-serif;letter-spacing:-.085em;line-height:.91}
+.hero .eyebrow{font-family:'DM Sans',sans-serif}
+.section>h2{font-family:Syne,sans-serif;letter-spacing:-.075em}
+.project{border-radius:6px 36px 6px 36px;border:1px solid #aba1e660;box-shadow:14px 14px 0 #a59af009,0 28px 70px #0006;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.project:hover{transform:translateY(-8px);box-shadow:16px 20px 0 #a59af014,0 32px 90px #0009}
+.project .project-img{min-height:400px;background-color:#0b0d20;transition:filter .5s}
+.project .project-img:after{content:"";position:absolute;inset:0;border:1px solid #a7a0ff19;pointer-events:none}
+.project .project-copy{position:relative}
+.project .project-copy:before{content:"AXJ / CASE STUDY";font-size:10px;font-weight:800;letter-spacing:.2em;color:#98dcf5;margin-bottom:18px}
+.project h3{font-family:Syne,sans-serif;font-size:clamp(36px,4.5vw,62px);letter-spacing:-.07em}
+.project .card-action-hint{display:none}
+.project .link{font-size:14px;font-weight:800;border-bottom:1px solid #a99bf4;padding-bottom:8px}
+.project-portal-trigger{display:inline-flex;gap:15px;align-items:center;justify-content:space-between;margin-top:26px;padding:15px 19px;border:1px solid #c0b3ff88;border-radius:4px 18px 4px 18px;background:#eeeaff;color:#17112d;font:800 14px 'DM Sans',sans-serif;cursor:pointer;transition:transform .25s,background .25s}
+.project-portal-trigger:hover{transform:translateX(5px);background:#fff}
+.project-portal-trigger .portal-glyph{width:24px;height:24px;display:grid;place-items:center;border:1px solid #241b4a;border-radius:50%;font-size:18px}
+.axj-portal{position:fixed;inset:0;z-index:10050;visibility:hidden;opacity:0;background:#050610;overflow:auto;overscroll-behavior:contain;transition:opacity .35s,visibility .35s}
+.axj-portal.open{visibility:visible;opacity:1}
+.axj-portal-inner{width:min(1440px,100%);margin:auto;min-height:100dvh;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);position:relative}
+.axj-portal-media{position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 50%,#5047a052,transparent 60%),#0b0d25}
+.axj-portal-media:before{content:"";position:absolute;inset:28px;border:1px solid #b1a4ff2e;pointer-events:none}
+.axj-portal-media img{width:90%;max-height:78dvh;object-fit:contain;filter:drop-shadow(0 35px 60px #0009);transform:translateY(24px) scale(.96);opacity:0;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s}
+.axj-portal.open .axj-portal-media img{transform:none;opacity:1}
+.axj-portal-index{position:absolute;top:35px;left:35px;color:#a7e3ff;font-size:11px;letter-spacing:.22em;font-weight:800}
+.axj-portal-copy{padding:clamp(35px,6vw,100px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.axj-portal-copy small{font-size:11px;letter-spacing:.2em;color:#a9e5ff;font-weight:800}
+.axj-portal-copy h2{font:800 clamp(53px,6.5vw,105px)/.92 Syne,sans-serif;letter-spacing:-.085em;margin:26px 0}
+.axj-portal-copy p{font-size:clamp(17px,1.5vw,21px);line-height:1.65;color:#d1d0e6;max-width:470px}
+.axj-portal-steps{display:flex;gap:8px;margin:26px 0}
+.axj-portal-steps span{height:4px;width:54px;background:#60597c;border-radius:3px}
+.axj-portal-steps span.active{background:#b7a4ff}
+.axj-portal-cta{display:inline-flex;align-items:center;gap:15px;padding:18px 22px;background:#ece8ff;color:#131025;border-radius:5px 19px 5px 19px;text-decoration:none;font-weight:800;margin-top:16px}
+.axj-portal-cta:hover{color:#131025;background:#fff;transform:translateX(4px)}
+.axj-portal-next{display:inline-block;background:transparent;border:0;border-bottom:1px solid #a9a0e9;color:#d5cbff;margin-top:24px;padding:10px 0;font:700 13px 'DM Sans',sans-serif;cursor:pointer}
+.axj-portal-close{position:fixed;z-index:2;right:24px;top:24px;width:52px;height:52px;border:1px solid #b6abff99;border-radius:15px;background:#161331e8;color:white;font-size:28px;cursor:pointer}
+.axj-portal-close:hover{background:#39306c}
+.axj-portal-nav{display:flex;gap:15px;margin-top:30px}
+.axj-portal-nav button{border:1px solid #988bdb66;background:#29234d;color:#fff;padding:11px 16px;border-radius:11px;cursor:pointer}
+.axj-portal-nav button:hover{background:#4a3c85}
+.axj-portal .portal-caption{position:absolute;bottom:32px;left:35px;color:#c4c0e1;font-size:12px;letter-spacing:.08em}
+@media(max-width:760px){
+.hero{border-radius:0 24px 24px 24px}
+.project,.project:nth-child(even){border-radius:4px 25px 4px 25px}
+.project .project-img{min-height:245px}
+.project h3{font-size:39px}
+.axj-portal-inner{grid-template-columns:1fr;display:flex;flex-direction:column}
+.axj-portal-media{min-height:39dvh;height:39dvh}
+.axj-portal-media:before{inset:12px}
+.axj-portal-media img{max-height:33dvh;width:93%}
+.axj-portal-index{top:20px;left:22px}
+.axj-portal-copy{padding:29px 24px 55px}
+.axj-portal-copy h2{font-size:clamp(47px,12vw,69px);margin:16px 0}
+.axj-portal-copy p{font-size:16px}
+.axj-portal-close{top:14px;right:14px;width:43px;height:43px}
+.axj-portal .portal-caption{bottom:13px;left:20px}
+.axj-portal-steps{margin:16px 0}
+}
+@media(prefers-reduced-motion:reduce){.axj-portal,.axj-portal-media img{transition:none}}
+</style></head><body>
 <div class="wrap"><header class="nav glass"><div class="brand">AXJ <span></span> · CREATIVE</div><nav class="menu" id="menu"><a href="#projetos">Projetos</a><a href="#historia">Sobre mim</a><a href="#oportunidades">Oportunidades</a><a href="#ia">IA no processo</a><a href="#contato">Contato</a></nav><button class="mobile" onclick="menu.classList.toggle('open')"></button></header>
 <section class="hero glass"><div class="hero-copy"><div class="eyebrow">Curiosidade · testes · projetos</div><h1>Oi, eu sou a Ju. </h1><p>Sou curiosa. Do tipo que vê alguma coisa, vai bisbilhotar para entender como funciona e, quando percebe, já está tentando fazer uma versão dela.</p><p>Foi assim que comecei a mexer com aplicativos, IA, interfaces e protótipos — mesmo sem vir da tecnologia e sem saber programar.</p><p>Este portfólio é onde eu mostro o que saiu dessas curiosidades: o que já consegui construir, o que testei e o que ainda estou tentando entender.</p><a class="button" href="#projetos">Ver onde fui me meter ↓</a><a class="story-cta" href="#historia">Essa história começa bem antes da tecnologia →</a></div><div class="hero-art"></div></section>
 
@@ -302,4 +365,20 @@ const menuButton=document.querySelector('.mobile');if(menuButton){menuButton.set
 })();
 </script><div class="axj-map" id="axjMap" role="dialog" aria-modal="true" aria-label="Mapa das curiosidades" aria-hidden="true"><div class="axj-map-inner"><header class="axj-map-head"><div><small>AXJ CREATIVE / VOCÊ ESTÁ AQUI</small><h2>Qual curiosidade<br>vamos abrir?</h2></div><button class="axj-map-close" type="button" aria-label="Fechar mapa">×</button></header><p class="axj-map-intro">Não precisa seguir uma ordem. Escolha um caminho e descubra o que existe por trás de cada projeto, experiência ou capítulo.</p><nav class="axj-map-grid" aria-label="Caminhos para explorar"><a class="axj-map-card photo" href="projetos/axis-live.html"><span class="num">01 / PROJETO REAL</span><div><strong>Axis Live</strong><span class="desc">A bolha que começou numa live e virou aplicativo Android.</span></div><span class="action">ENTRAR NO PROJETO ↗</span></a><a class="axj-map-card learn" href="projetos/learn-educacao.html"><span class="num">02 / EM CONSTRUÇÃO</span><div><strong>Learn + AXIA</strong><span class="desc">Uma ideia de cursos que cresceu muito além da primeira tela.</span></div><span class="action">EXPLORAR O ECOSSISTEMA ↗</span></a><button type="button" class="axj-map-card story" data-map-story><span class="num">03 / 11 CAPÍTULOS</span><div><strong>Antes da tecnologia</strong><span class="desc">Desenho, beleza, games, IA e todas as voltas até aqui.</span></div><span class="action">ABRIR MEU DIÁRIO ↗</span></button><a class="axj-map-card ai" href="#ia" data-map-jump><span class="num">04 / PROCESSO CRIATIVO</span><div><strong>Eu + inteligência artificial</strong><span class="desc">Como uma pergunta vira teste, erro, mudança e outra ideia.</span></div><span class="action">VER COMO EU CRIO ↗</span></a><a class="axj-map-card" href="#oportunidades" data-map-jump><span class="num">05 / PRÓXIMO CAPÍTULO</span><div><strong>Onde quero chegar</strong><span class="desc">O que quero experimentar, construir e aprender com outras pessoas.</span></div><span class="action">DESCOBRIR ↗</span></a><a class="axj-map-card contact" href="#contato" data-map-jump><span class="num">06 / CONVERSA ABERTA</span><div><strong>Tem algo para bisbilhotar?</strong><span class="desc">Projetos, parcerias, testes e novas possibilidades.</span></div><span class="action">VAMOS CONVERSAR ↗</span></a></nav><footer class="axj-map-foot"><span>Não existe caminho certo para a curiosidade.</span><span>AXJ CREATIVE — DIÁRIO DE UMA CURIOSA</span></footer></div></div><button class="axj-map-launch" type="button" data-open-map aria-label="Abrir mapa das curiosidades">Explorar o mapa ↗</button><script>
 (()=>{'use strict';const map=document.getElementById('axjMap');if(!map)return;const close=map.querySelector('.axj-map-close');let previous=null;function open(){previous=document.activeElement;map.classList.add('open');map.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';map.scrollTop=0;close.focus()}function shut(){map.classList.remove('open');map.setAttribute('aria-hidden','true');document.body.style.overflow='';previous?.focus()}document.querySelectorAll('[data-open-map]').forEach(b=>b.addEventListener('click',open));close.addEventListener('click',shut);map.querySelectorAll('[data-map-jump]').forEach(a=>a.addEventListener('click',shut));map.querySelector('[data-map-story]')?.addEventListener('click',()=>{shut();if(typeof openStory==='function')openStory()});document.addEventListener('keydown',e=>{if(!map.classList.contains('open'))return;if(e.key==='Escape'){e.stopImmediatePropagation();shut()}else if(e.key==='Tab'){const list=[...map.querySelectorAll('button,a[href]')];const first=list[0],last=list[list.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}},true)})();
+</script><div class="axj-portal" id="axjPortal" role="dialog" aria-modal="true" aria-label="Explorar projeto" aria-hidden="true"><button class="axj-portal-close" type="button" aria-label="Fechar apresentação">×</button><div class="axj-portal-inner"><div class="axj-portal-media"><span class="axj-portal-index">AXJ / PROJETO 01</span><img alt=""><span class="portal-caption">CRIATIVIDADE EM MOVIMENTO / AXJ CREATIVE</span></div><div class="axj-portal-copy"><small>UM PROJETO, UMA HISTÓRIA</small><h2></h2><p></p><div class="axj-portal-steps"><span class="active"></span><span></span><span></span></div><a class="axj-portal-cta" href="#">Explorar o projeto completo ↗</a><button class="axj-portal-next" type="button">Descobrir outra parte →</button><div class="axj-portal-nav"><button type="button" data-portal-prev aria-label="Voltar etapa">← Anterior</button><button type="button" data-portal-next aria-label="Próxima etapa">Próxima →</button></div></div></div></div><script>
+(()=>{'use strict';
+const projects=[
+{title:'Axis Live',url:'projetos/axis-live.html',images:['https://axj.gmyll.com/assets/thumbaxi.png','https://axj.gmyll.com/assets/livebolha.png','https://axj.gmyll.com/assets/menubolha.png'],texts:['Eu faço lives de jogos pelo celular e queria interagir com as pessoas sem precisar sair do jogo.','Comecei testando uma bolha flutuante e isso acabou virando um aplicativo Android.','As funções mudam a partir do uso durante as próprias lives: mensagens, reações, perguntas, voz e eventos do TikTok.'],labels:['A IDEIA','O PRIMEIRO TESTE','O QUE VEIO DEPOIS']},
+{title:'Learn Educação + AXIA',url:'projetos/learn-educacao.html',images:['https://axj.gmyll.com/assets/learn-axia.png','https://axj.gmyll.com/assets/learn-login.png','https://axj.gmyll.com/assets/learn-axia.png'],texts:['Começou com o Learner, uma experiência de cursos.','Cresceu para um ecossistema: Learner, Learn Aluno, Learn Professor, Plataforma Learn e a AXIA conectando a jornada de aprendizagem.','Já existem protótipos e versões funcionais. O desenvolvimento continua, mas algumas etapas dependem de ferramentas, IA, serviços e recursos que hoje têm custo.'],labels:['A PRIMEIRA IDEIA','A EXPERIÊNCIA','O PRÓXIMO PASSO']}
+];
+const portal=document.getElementById('axjPortal');if(!portal)return;const close=portal.querySelector('.axj-portal-close'),media=portal.querySelector('img'),heading=portal.querySelector('h2'),desc=portal.querySelector('.axj-portal-copy p'),cta=portal.querySelector('.axj-portal-cta'),dots=[...portal.querySelectorAll('.axj-portal-steps span')];let project=0,step=0,back=null,scrollBefore='';
+function render(){const item=projects[project];heading.textContent=step===0?item.title:item.labels[step];desc.textContent=item.texts[step];media.src=item.images[step];media.alt='Imagem real do projeto '+item.title+' — '+item.labels[step];cta.href=item.url;portal.querySelector('.axj-portal-index').textContent='AXJ / PROJETO 0'+(project+1)+' / '+item.labels[step];dots.forEach((d,i)=>d.classList.toggle('active',i===step));portal.querySelector('.axj-portal-next').textContent=step===2?'Visitar outro projeto →':'Descobrir outra parte →'}
+function open(p){back=document.activeElement;project=p;step=0;render();scrollBefore=document.body.style.overflow;document.body.style.overflow='hidden';portal.classList.add('open');portal.setAttribute('aria-hidden','false');portal.scrollTop=0;close.focus()}
+function shut(){portal.classList.remove('open');portal.setAttribute('aria-hidden','true');document.body.style.overflow=scrollBefore;back?.focus()}
+function advance(dir){step+=dir;if(step>2){step=0;project=(project+1)%projects.length}else if(step<0){step=2;project=(project+projects.length-1)%projects.length}render()}
+document.querySelectorAll('.project').forEach((card,i)=>{if(i>1)return;const copy=card.querySelector('.project-copy');const btn=document.createElement('button');btn.className='project-portal-trigger';btn.type='button';btn.innerHTML='Entrar no universo do projeto <span class="portal-glyph" aria-hidden="true">↗</span>';copy.appendChild(btn);btn.addEventListener('click',e=>{e.stopPropagation();open(i)});card.addEventListener('click',e=>{if(e.target.closest('a,button'))return;open(i)});card.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target===card){e.preventDefault();open(i)}},true)});
+close.onclick=shut;portal.querySelector('[data-portal-prev]').onclick=()=>advance(-1);portal.querySelector('[data-portal-next]').onclick=()=>advance(1);portal.querySelector('.axj-portal-next').onclick=()=>advance(1);
+let start=0;portal.addEventListener('touchstart',e=>{start=e.changedTouches[0].clientX},{passive:true});portal.addEventListener('touchend',e=>{const diff=e.changedTouches[0].clientX-start;if(Math.abs(diff)>85)advance(diff<0?1:-1)},{passive:true});
+document.addEventListener('keydown',e=>{if(!portal.classList.contains('open'))return;if(e.key==='Escape'){e.stopImmediatePropagation();shut()}else if(e.key==='ArrowRight')advance(1);else if(e.key==='ArrowLeft')advance(-1);else if(e.key==='Tab'){const focusable=[...portal.querySelectorAll('button,a[href]')];const idx=focusable.indexOf(document.activeElement);if(idx>=0){e.preventDefault();focusable[(idx+(e.shiftKey?-1:1)+focusable.length)%focusable.length].focus()}}},true);
+})();
 </script></body></html>
