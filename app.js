@@ -343,3 +343,28 @@ dialogContent.addEventListener('click', event => {
 });
 imageDialog?.querySelector('.dialog-close')?.addEventListener('click', () => imageDialog.close());
 imageDialog?.addEventListener('click', event => { if (event.target === imageDialog) imageDialog.close(); });
+
+/* Animações progressivas: só ativar quando houver suporte e movimento permitido */
+(() => {
+  if (!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  const targets = document.querySelectorAll('.intro,.story-card,.project-card,.process-list li,.evolution-track article,.state-copy,.state-questions,.inside-card,.ability-grid button,.skill-panel,.next-panel,.contact');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('motion-visible');
+      observer.unobserve(entry.target);
+    });
+  }, {threshold:0.08,rootMargin:'0px 0px 45px 0px'});
+  targets.forEach((element,index) => {
+    element.classList.add('motion-reveal');
+    element.style.setProperty('--reveal-delay', (index % 4) * 55 + 'ms');
+    observer.observe(element);
+  });
+  document.documentElement.classList.add('motion-ready');
+  requestAnimationFrame(() => {
+    targets.forEach(element => {
+      if (element.getBoundingClientRect().top < window.innerHeight * .95) element.classList.add('motion-visible');
+    });
+  });
+})();
