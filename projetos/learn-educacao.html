@@ -26,6 +26,54 @@ img{max-width:100%;height:auto}
 @media(hover:hover){.section .glass{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}.section .glass:hover{border-color:#b0a1ff88;box-shadow:0 22px 60px #6550c125}}
 @media(max-width:760px){.section>.glass,.section .glass{border-radius:20px}h1{font-size:clamp(40px,11vw,60px)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
+/* AXJ case experience — galeria cinematográfica e painéis exploráveis */
+body{font-family:Outfit,system-ui,sans-serif}
+.wrap{width:min(1180px,calc(100% - 32px))}
+.back{display:inline-flex;align-items:center;gap:10px;margin:24px 0 20px;padding:13px 18px;background:#a39bff12;border:1px solid #a39bff44;border-radius:13px;color:#e3ddff;text-decoration:none;font-weight:700}
+.back:hover{transform:translateX(-4px);color:#fff}
+.hero{border-radius:30px;overflow:hidden;box-shadow:0 30px 90px #0008,0 0 70px #6b54d015;background:linear-gradient(130deg,#221d51,#0a102c)}
+.hero h1{font-size:clamp(48px,7.5vw,90px);letter-spacing:-.065em;line-height:1}
+.hero-copy{position:relative;z-index:1}
+.hero-img{background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important;background-color:#101331!important}
+.section{padding:70px 0}
+.section>h2{letter-spacing:-.055em;line-height:1.06}
+.copy{padding:clamp(28px,5vw,58px);border-radius:26px}
+.grid{gap:17px}
+.mini,.eco{position:relative;overflow:hidden;border-radius:22px!important;cursor:pointer;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.mini:hover,.eco:hover{transform:translateY(-5px);border-color:#b3a1ff!important;box-shadow:0 22px 55px #5a4fc42a}
+.mini:after,.eco:after{content:"VER DETALHES  ↗";display:block;margin-top:20px;font-size:11px;letter-spacing:.13em;font-weight:800;color:#9ddaff}
+.mini:focus-visible,.eco:focus-visible,.shot:focus-visible,.proof:focus-visible,.screen:focus-visible{outline:3px solid #9bdfff;outline-offset:4px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
+.shot{position:relative;margin:0!important;padding:12px!important;overflow:hidden;cursor:zoom-in;border-radius:22px!important;transition:transform .35s ease,border-color .3s,box-shadow .3s}
+.shot:hover{transform:translateY(-7px);border-color:#b4a3ff!important;box-shadow:0 25px 55px #0007}
+.shot img{display:block;width:100%;height:clamp(230px,30vw,350px);object-fit:contain;background:linear-gradient(145deg,#15183a,#0a0d21);border-radius:14px;transition:transform .4s}
+.shot:hover img{transform:scale(1.035)}
+.shot figcaption{font-size:14px;font-weight:700;color:#ddd9f4;padding:15px 7px 7px}
+.shot:before{content:"AMPLIAR  ↗";position:absolute;z-index:2;right:20px;top:20px;font-size:10px;font-weight:800;letter-spacing:.12em;color:white;background:#28224dcb;border:1px solid #b4a3ff77;padding:9px 11px;border-radius:9px}
+.proof,.screen{cursor:zoom-in;max-width:100%;object-fit:contain;transition:filter .3s,transform .3s}
+.proof:hover,.screen:hover{filter:brightness(1.12)}
+.axj-viewer{position:fixed;inset:0;z-index:9999;background:#030515f2;backdrop-filter:blur(22px);display:none;align-items:center;justify-content:center;padding:70px 70px 80px}
+.axj-viewer.open{display:flex;animation:viewerIn .25s ease}
+.axj-viewer img{max-width:100%;max-height:calc(100dvh - 160px);object-fit:contain;border-radius:12px;box-shadow:0 20px 70px #000a}
+.axj-viewer .viewer-title{position:absolute;bottom:23px;left:80px;right:80px;text-align:center;color:#eeeaff;font-size:15px;font-weight:700}
+.axj-viewer button{position:absolute;border:1px solid #a69be577;background:#29244be8;color:white;border-radius:14px;min-width:44px;height:46px;font-size:24px;cursor:pointer}
+.axj-viewer button:hover{background:#4d4087}
+.viewer-close{right:22px;top:20px}.viewer-prev{left:18px;top:50%}.viewer-next{right:18px;top:50%}
+.viewer-count{position:absolute;top:32px;left:25px;color:#a7dfff;font-size:12px;letter-spacing:.16em;font-weight:800}
+.axj-info-modal{position:fixed;inset:0;z-index:9998;background:#030515d9;backdrop-filter:blur(18px);display:none;align-items:center;justify-content:center;padding:18px}
+.axj-info-modal.open{display:flex}
+.axj-info-panel{position:relative;width:min(620px,100%);padding:clamp(28px,5vw,55px);border:1px solid #ab9aee88;border-radius:28px;background:radial-gradient(circle at 100% 0%,#7258d43b,transparent 55%),linear-gradient(145deg,#211c49,#0a102b);box-shadow:0 40px 90px #000a}
+.axj-info-panel h2{font-size:clamp(30px,5vw,47px);margin:15px 40px 20px 0}
+.axj-info-panel p{font-size:18px;line-height:1.75;color:#d9d6ec}
+.axj-info-panel .eyebrow{font-size:11px;letter-spacing:.18em;color:#a5e0ff;font-weight:800}
+.axj-info-panel button{position:absolute;top:16px;right:16px;background:#32295f;color:white;border:1px solid #a79ae3;border-radius:50%;width:42px;height:42px;font-size:25px;cursor:pointer}
+.axj-progress{position:fixed;top:0;left:0;width:0;height:3px;z-index:9997;background:linear-gradient(90deg,#8478ff,#9ee6ff);box-shadow:0 0 12px #9bdfff}
+.axj-reveal{opacity:0;transform:translateY(25px);transition:opacity .65s ease,transform .65s ease}
+.axj-reveal.visible{opacity:1;transform:none}
+@keyframes viewerIn{from{opacity:0}to{opacity:1}}
+@media(max-width:760px){.wrap{width:calc(100% - 24px)}.section{padding:55px 0}.hero{border-radius:22px}.hero-img{min-height:260px!important;background-size:contain!important}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.shot{padding:8px!important;border-radius:16px!important}.shot img{height:220px}.shot figcaption{font-size:12px;padding:12px 5px 5px}.shot:before{top:13px;right:13px;font-size:9px;padding:7px}.axj-viewer{padding:65px 12px 90px}.axj-viewer img{max-height:calc(100dvh - 190px)}.viewer-prev{left:10px;top:auto;bottom:19px}.viewer-next{right:10px;top:auto;bottom:19px}.axj-viewer .viewer-title{bottom:30px;left:65px;right:65px;font-size:12px}.viewer-count{top:32px;left:15px}.axj-info-panel{border-radius:22px}}
+@media(prefers-reduced-motion:reduce){.axj-reveal{opacity:1;transform:none}.axj-viewer.open{animation:none}}
 </style></head><body><main class="wrap">
 <a class="back" href="../index.html#projetos">← Voltar aos projetos</a>
 <section class="hero glass"><div class="hero-copy"><span class="tag">Em desenvolvimento</span><h1>Learn Educação + AXIA</h1><p>O que começou com uma experiência de cursos foi crescendo até virar a visão de um ecossistema educacional.</p><p>Hoje o projeto reúne <strong>Learner, Learn Aluno, Learn Professor, Plataforma Learn</strong> e a <strong>AXIA</strong>, pensada para acompanhar a aprendizagem através dessas experiências.</p></div><div class="hero-img"></div></section>
@@ -35,4 +83,25 @@ img{max-width:100%;height:auto}
 <section class="section"><h2>O que estou construindo e testando</h2><div class="grid"><div class="mini glass"><h3>Experiência do aluno</h3><p>Fluxos de acesso, turma, atividades, aprendizado e interação com a AXIA.</p></div><div class="mini glass"><h3>Professor e turma</h3><p>Como professor, aluno e atividades podem fazer parte da mesma experiência.</p></div><div class="mini glass"><h3>AXIA</h3><p>Uma tutora de IA pensada para acompanhar o aprendizado dentro do contexto do projeto.</p></div><div class="mini glass"><h3>Teste no celular</h3><p>As versões são abertas, compiladas e testadas no próprio Android enquanto o projeto evolui.</p></div></div></section>
 <section class="section"><div class="copy glass"><h2>Onde está agora</h2><p>O Learn Educação ainda está em desenvolvimento. Algumas partes já viraram protótipos e versões funcionais/testáveis; outras continuam sendo definidas, refeitas ou exploradas.</p><p>Eu prefiro mostrar o projeto assim: não como se estivesse pronto, mas como algo que está realmente sendo construído.</p></div></section>
 <section class="section"><div class="copy glass support"><h2>O que limita os próximos passos</h2><p>Eu continuo desenvolvendo e testando o Learn dentro do que tenho disponível. Mas algumas etapas dependem de ferramentas de IA, serviços, infraestrutura e outros recursos de desenvolvimento que têm custo.</p><p>Ter apoio não significa “tirar o projeto do zero”: ele já existe e já passou por várias versões. Significa conseguir ampliar o que posso testar, manter e desenvolver daqui para frente.</p><a href="https://github.com/sponsors/juhcileia67" target="_blank" rel="noopener">💜 Apoiar o desenvolvimento pelo GitHub Sponsors</a></div></section>
-<div class="footer">AXJ Creative</div></main></body></html>
+<div class="footer">AXJ Creative</div></main><script>
+(()=>{'use strict';
+const all=[...document.querySelectorAll('.gallery .shot img,.proof,.screen')];
+const viewer=document.createElement('div');viewer.className='axj-viewer';viewer.setAttribute('role','dialog');viewer.setAttribute('aria-modal','true');viewer.setAttribute('aria-label','Visualizador de imagens do projeto');viewer.innerHTML='<span class="viewer-count"></span><button class="viewer-close" type="button" aria-label="Fechar imagem">×</button><button class="viewer-prev" type="button" aria-label="Imagem anterior">‹</button><img alt=""><button class="viewer-next" type="button" aria-label="Próxima imagem">›</button><div class="viewer-title"></div>';document.body.appendChild(viewer);
+let current=0,focusBack=null,locked=false;const img=viewer.querySelector('img');
+function lock(){if(!locked){document.body.style.overflow='hidden';locked=true}}
+function unlock(){document.body.style.overflow='';locked=false}
+function show(i){current=(i+all.length)%all.length;const el=all[current];img.src=el.currentSrc||el.src;img.alt=el.alt||'';viewer.querySelector('.viewer-title').textContent=el.closest('figure')?.querySelector('figcaption')?.textContent||el.alt||'Imagem do projeto';viewer.querySelector('.viewer-count').textContent=String(current+1).padStart(2,'0')+' / '+String(all.length).padStart(2,'0')}
+function open(i){focusBack=document.activeElement;show(i);viewer.classList.add('open');lock();viewer.querySelector('.viewer-close').focus()}
+function close(){viewer.classList.remove('open');unlock();focusBack?.focus()}
+all.forEach((el,i)=>{const target=el.closest('.shot')||el;target.tabIndex=0;target.setAttribute('role','button');target.setAttribute('aria-label','Ampliar: '+(el.alt||'imagem'));target.addEventListener('click',()=>open(i));target.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i)}})});
+viewer.querySelector('.viewer-close').onclick=close;viewer.querySelector('.viewer-prev').onclick=()=>show(current-1);viewer.querySelector('.viewer-next').onclick=()=>show(current+1);viewer.addEventListener('click',e=>{if(e.target===viewer)close()});
+let touchStart=0;viewer.addEventListener('touchstart',e=>{touchStart=e.changedTouches[0].clientX},{passive:true});viewer.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-touchStart;if(Math.abs(d)>55)show(current+(d<0?1:-1))},{passive:true});
+const cards=[...document.querySelectorAll('.mini,.eco')];const info=document.createElement('div');info.className='axj-info-modal';info.setAttribute('role','dialog');info.setAttribute('aria-modal','true');info.innerHTML='<div class="axj-info-panel"><button type="button" aria-label="Fechar detalhes">×</button><div class="eyebrow">POR DENTRO DO PROJETO</div><h2 id="infoTitle"></h2><div id="infoText"></div></div>';document.body.appendChild(info);
+function closeInfo(){info.classList.remove('open');unlock();focusBack?.focus()}
+cards.forEach(card=>{card.tabIndex=0;card.setAttribute('role','button');const activate=()=>{focusBack=document.activeElement;info.querySelector('#infoTitle').textContent=card.querySelector('h3,strong')?.textContent||'Detalhes';const clone=card.cloneNode(true);clone.querySelector('h3,strong')?.remove();info.querySelector('#infoText').replaceChildren(...[...clone.childNodes].map(n=>n.cloneNode(true)));info.classList.add('open');lock();info.querySelector('button').focus()};card.addEventListener('click',activate);card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate()}})});
+info.querySelector('button').onclick=closeInfo;info.addEventListener('click',e=>{if(e.target===info)closeInfo()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(viewer.classList.contains('open'))close();else if(info.classList.contains('open'))closeInfo()}else if(viewer.classList.contains('open')){if(e.key==='ArrowLeft')show(current-1);if(e.key==='ArrowRight')show(current+1);if(e.key==='Tab'){const buttons=[...viewer.querySelectorAll('button')];const index=buttons.indexOf(document.activeElement);if(index>=0){e.preventDefault();buttons[(index+(e.shiftKey?-1:1)+buttons.length)%buttons.length].focus()}}}else if(info.classList.contains('open')&&e.key==='Tab'){e.preventDefault();info.querySelector('button').focus()}});
+const bar=document.createElement('div');bar.className='axj-progress';document.body.appendChild(bar);let raf=false;function progress(){const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?Math.min(100,scrollY/h*100):0)+'%';raf=false}addEventListener('scroll',()=>{if(!raf){raf=true;requestAnimationFrame(progress)}},{passive:true});addEventListener('resize',progress);progress();
+if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.05,rootMargin:'0px 0px 50px 0px'});document.querySelectorAll('.section').forEach(s=>{s.classList.add('axj-reveal');observer.observe(s)})}
+})();
+</script></body></html>
