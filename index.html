@@ -152,13 +152,40 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
 }
 @media(max-width:380px){.skills{grid-template-columns:1fr}.skill{min-height:175px}}
 @media(prefers-reduced-motion:reduce){.hero h1:after,.hero .eyebrow:before{animation:none!important}}
+</style><style>
+/* R3 — experiência interna consistente */
+.read-overlay{background:rgba(2,3,16,.87);backdrop-filter:blur(22px);padding:clamp(10px,3vw,28px)}
+.read-panel{width:min(930px,100%);max-height:min(91dvh,1000px);border-radius:30px;padding:clamp(24px,5vw,62px);background:radial-gradient(circle at 92% 3%,#6c56c93d,transparent 38%),linear-gradient(145deg,#1a1945,#090d24 78%);border:1px solid #b4a1ff66;box-shadow:0 40px 130px #000c,0 0 90px #7966dc1e}
+.read-panel:before{content:"AXJ CREATIVE  /  LEITURA";display:block;color:#9bdcff;font-size:11px;font-weight:800;letter-spacing:.22em;margin:2px 55px 26px 0}
+.read-panel h2{font-size:clamp(34px,5vw,58px);letter-spacing:-.055em;line-height:1.06;margin:0 48px 28px 0;max-width:760px}
+.read-panel p{font-size:clamp(17px,2vw,20px);line-height:1.85;color:#d7d6eb;margin:0 0 22px}
+.read-panel p:first-of-type{font-size:clamp(19px,2.2vw,23px);color:#f2edff}
+.read-panel .kicker{color:#99dfff;letter-spacing:.15em;font-size:12px;margin:0 0 16px}
+.read-panel .quote{background:#a68bff0b;padding:22px;border-left:3px solid #a6a2ff;border-radius:0 16px 16px 0}
+.read-panel .card-action-hint{display:none}
+.read-panel .read-close{position:sticky;top:0;margin:-16px -16px 0 0;background:#2c2559;border:1px solid #aaa0ff;color:#fff;box-shadow:0 8px 30px #0008;transition:transform .2s,background .2s}
+.read-panel .read-close:hover{transform:rotate(90deg);background:#5c4c9d}
+.read-panel::-webkit-scrollbar{width:7px}.read-panel::-webkit-scrollbar-thumb{background:#8477c2;border-radius:10px}
+.story-modal{background:#03051ce8;backdrop-filter:blur(18px);padding:clamp(10px,3vw,30px)}
+.story-shell{width:min(900px,100%);max-height:91dvh;padding:clamp(25px,5vw,60px);border:1px solid #b4a1ff66;background:radial-gradient(circle at 100% 0,#7056b933,transparent 42%),linear-gradient(135deg,#201a49,#0a0e27);box-shadow:0 30px 100px #000b;border-radius:28px}
+.story-card.active{animation:chapterIn .42s cubic-bezier(.2,.7,.2,1)}
+.story-card h3{font-size:clamp(34px,5vw,57px);letter-spacing:-.05em;line-height:1.09}
+.story-card p{font-size:clamp(17px,2vw,20px);color:#dcd8ef}
+.story-num{color:#9bdcff}
+.story-nav button{background:#342c68;border-color:#8c7dc3;padding:14px 21px;cursor:pointer;transition:transform .2s,background .2s}
+.story-nav button:hover{transform:translateY(-2px);background:#51448e}
+.story-dot.active{background:#9bdcff;box-shadow:0 0 12px #9bdcff}
+.story-close{position:sticky;top:0;float:right;background:#332a65;border:1px solid #aaa0ff;cursor:pointer;z-index:2}
+@keyframes chapterIn{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:760px){.read-panel{max-height:94dvh;border-radius:22px;padding:26px 22px}.read-panel h2{font-size:36px}.story-shell{max-height:94dvh;padding:27px 22px}.story-nav button{padding:12px 15px}}
+@media(prefers-reduced-motion:reduce){.story-card.active{animation:none}}
 </style></head><body>
 <div class="wrap"><header class="nav glass"><div class="brand">AXJ <span></span> · CREATIVE</div><nav class="menu" id="menu"><a href="#projetos">Projetos</a><a href="#historia">Sobre mim</a><a href="#oportunidades">Oportunidades</a><a href="#ia">IA no processo</a><a href="#contato">Contato</a></nav><button class="mobile" onclick="menu.classList.toggle('open')"></button></header>
 <section class="hero glass"><div class="hero-copy"><div class="eyebrow">Curiosidade · testes · projetos</div><h1>Oi, eu sou a Ju. </h1><p>Sou curiosa. Do tipo que vê alguma coisa, vai bisbilhotar para entender como funciona e, quando percebe, já está tentando fazer uma versão dela.</p><p>Foi assim que comecei a mexer com aplicativos, IA, interfaces e protótipos — mesmo sem vir da tecnologia e sem saber programar.</p><p>Este portfólio é onde eu mostro o que saiu dessas curiosidades: o que já consegui construir, o que testei e o que ainda estou tentando entender.</p><a class="button" href="#projetos">Ver onde fui me meter ↓</a><a class="story-cta" href="#historia">Essa história começa bem antes da tecnologia →</a></div><div class="hero-art"></div></section>
 
 <section class="section" id="projetos"><div class="kicker">PROJETOS</div><h2>Algumas curiosidades foram longe demais.</h2><p class="intro">Aqui não tem projeto apresentado como se fosse maior do que é. Tem o que eu fiz, o que consegui testar e o que ainda está em construção.</p><div class="projects">
-<article class="project glass"><div class="project-img" style="background-image:url('https://axj.gmyll.com/assets/thumbaxi.png')"></div><div class="project-copy"><span class="tag">Versão funcional · Android</span><h3>Axis Live</h3><p>Eu faço lives de jogos pelo celular e queria interagir com as pessoas sem precisar sair do jogo. Comecei testando uma bolha flutuante e isso acabou virando um aplicativo Android.</p><p>As funções mudam a partir do uso durante as próprias lives: mensagens, reações, perguntas, voz e eventos do TikTok.</p><a class="link" href="https://axj.gmyll.com/projetos/axis-live.html">Ver o projeto →</a></div></article>
-<article class="project glass learn-card"><div class="project-img" style="background-image:url('https://axj.gmyll.com/assets/learn-axia.png')"></div><div class="project-copy"><span class="tag">Em desenvolvimento</span><h3>Learn Educação + AXIA</h3><p>Começou com o Learner, uma experiência de cursos, e cresceu para um ecossistema: <strong>Learner, Learn Aluno, Learn Professor, Plataforma Learn</strong> e a <strong>AXIA</strong> conectando a jornada de aprendizagem.</p><p>Já existem protótipos e versões funcionais. O desenvolvimento continua, mas algumas etapas dependem de ferramentas, IA, serviços e recursos que hoje têm custo.</p><a class="link" href="https://axj.gmyll.com/projetos/learn-educacao.html">Explorar o projeto →</a> &nbsp; <a class="link" href="https://github.com/sponsors/juhcileia67" target="_blank" rel="noopener">Apoiar o desenvolvimento 💜</a></div></article>
+<article class="project glass"><div class="project-img" style="background-image:url('https://axj.gmyll.com/assets/thumbaxi.png')"></div><div class="project-copy"><span class="tag">Versão funcional · Android</span><h3>Axis Live</h3><p>Eu faço lives de jogos pelo celular e queria interagir com as pessoas sem precisar sair do jogo. Comecei testando uma bolha flutuante e isso acabou virando um aplicativo Android.</p><p>As funções mudam a partir do uso durante as próprias lives: mensagens, reações, perguntas, voz e eventos do TikTok.</p><a class="link" href="projetos/axis-live.html">Ver o projeto →</a></div></article>
+<article class="project glass learn-card"><div class="project-img" style="background-image:url('https://axj.gmyll.com/assets/learn-axia.png')"></div><div class="project-copy"><span class="tag">Em desenvolvimento</span><h3>Learn Educação + AXIA</h3><p>Começou com o Learner, uma experiência de cursos, e cresceu para um ecossistema: <strong>Learner, Learn Aluno, Learn Professor, Plataforma Learn</strong> e a <strong>AXIA</strong> conectando a jornada de aprendizagem.</p><p>Já existem protótipos e versões funcionais. O desenvolvimento continua, mas algumas etapas dependem de ferramentas, IA, serviços e recursos que hoje têm custo.</p><a class="link" href="projetos/learn-educacao.html">Explorar o projeto →</a> &nbsp; <a class="link" href="https://github.com/sponsors/juhcileia67" target="_blank" rel="noopener">Apoiar o desenvolvimento 💜</a></div></article>
 </div></section>
 
 <section class="section" id="historia"><div class="story glass story-entry" onclick="openStory()" role="button" tabindex="0"><div class="kicker">MINHA HISTÓRIA</div><h2>Como eu fui parar nisso?</h2><p>Essa história começa bem antes da tecnologia. Tem desenho, anos trabalhando com beleza, um período difícil, games, IA, um celular e muitas perguntas que começaram com “será que dá pra fazer isso?”.</p><span class="story-cta">Abrir minha história em capítulos →</span></div></section>
