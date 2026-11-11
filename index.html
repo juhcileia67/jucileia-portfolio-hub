@@ -345,8 +345,8 @@ function openCard(card){lastFocus=document.activeElement;const title=card.queryS
 function closeCard(){overlay.classList.remove('is-open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';lastFocus?.focus();}
 targets.forEach(card=>{const link=card.classList.contains('project')?card.querySelector('.project-copy a[href]'):null;card.dataset.cardAction=link?'navigate':'read';card.tabIndex=0;card.setAttribute('role','button');const hint=document.createElement('span');hint.className='card-action-hint';hint.textContent=link?'Abrir projeto':'Toque para ler';(card.querySelector('.project-copy')||card).appendChild(hint);
 const activate=()=>{if(link){window.location.href=link.href}else openCard(card)};
-card.addEventListener('click',e=>{if(e.target.closest('a,button'))return;activate()});
-card.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&!e.target.closest('a,button')){e.preventDefault();activate()}});
+card.addEventListener('click',e=>{if(card.classList.contains('project'))return;if(e.target.closest('a,button'))return;activate()});
+card.addEventListener('keydown',e=>{if(card.classList.contains('project'))return;if((e.key==='Enter'||e.key===' ')&&!e.target.closest('a,button')){e.preventDefault();activate()}});
 });
 close.addEventListener('click',closeCard);overlay.addEventListener('click',e=>{if(e.target===overlay)closeCard()});
 document.addEventListener('keydown',e=>{if(!overlay.classList.contains('is-open'))return;if(e.key==='Escape'){e.stopImmediatePropagation();closeCard()}if(e.key==='Tab'){const focusable=[close,...body.querySelectorAll('a[href],button:not([disabled])')];const first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}},true);
