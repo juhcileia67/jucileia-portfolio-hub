@@ -106,3 +106,12 @@ body:before{background-image:linear-gradient(rgba(128,88,255,.025) 1px,transpare
 .axj-dash-card:active{transform:scale(.98)}
 }
 @media(max-width:760px){.axj-dash-grid{grid-template-columns:1fr}.axj-dash-feature{grid-column:auto}.axj-dash-card{min-height:195px;padding:23px}.axj-dashboard{padding:28px 0}}
+
+/* Conteúdo editorial e documentação AXJ Live */
+.axj-live-spot{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px;border-radius:24px;margin:24px 0}
+.axj-live-spot h3{font:800 clamp(1.2rem,2.2vw,1.8rem)/1.2 Manrope,sans-serif;margin:8px 0}
+.axj-live-spot p{color:var(--muted);margin:0}
+.axj-live-spot a{white-space:nowrap;color:var(--cyan);font-weight:700;text-decoration:none}
+footer a{color:var(--cyan);text-decoration:none}
+.story-card img{object-fit:cover}
+@media(max-width:760px){.axj-live-spot{flex-direction:column;align-items:flex-start;padding:22px}.axj-live-spot a{white-space:normal}}
