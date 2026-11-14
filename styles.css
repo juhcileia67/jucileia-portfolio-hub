@@ -220,3 +220,33 @@ footer a{color:var(--cyan);text-decoration:none}
 @media(max-width:1050px){.axj-home-refresh .home-hero-content{width:70%}.axj-home-refresh .home-feature-layout{grid-template-columns:1fr 1fr}.axj-home-refresh .home-tile-art{height:160px}}
 @media(max-width:760px){.axj-home-refresh .home-hero{min-height:0;padding:25px 22px 185px;align-items:flex-start}.axj-home-refresh .home-hero-content{width:100%}.axj-home-refresh .home-hero h2{font-size:clamp(1.8rem,7vw,2.4rem)}.axj-home-refresh .home-hero p{font-size:.91rem}.axj-home-refresh .home-hero-portrait{height:175px;width:100%;bottom:0}.axj-home-refresh .home-hero-portrait:before{background:linear-gradient(180deg,#151735,transparent 60%)}.axj-home-refresh .home-hero-portrait img{object-position:center 25%;mask-image:linear-gradient(0deg,black 65%,transparent)}.axj-home-refresh .home-section-label{display:block;margin-top:27px}.axj-home-refresh .home-section-label p{margin:9px 0 0}.axj-home-refresh .home-feature-layout{grid-template-columns:1fr}.axj-home-refresh .home-tile-wide{grid-column:auto;display:flex}.axj-home-refresh .home-tile-art,.axj-home-refresh .home-tile-wide .home-tile-art{height:165px;min-height:0}.axj-home-refresh .home-tile-body{padding:20px}.axj-home-refresh .home-hero-actions button{font-size:.82rem}}
 @media(prefers-reduced-motion:reduce){.axj-home-refresh .home-tile,.axj-home-refresh .home-hero-actions button{transition:none}}
+
+/* Home editorial: somente conteúdo da primeira tela; preserva navegação e shell. */
+.axj-home-refresh.home-editorial{min-width:0;max-width:100%;overflow-wrap:break-word}
+.home-editorial .home-hero{min-height:450px}
+.home-editorial .home-hero-content{width:min(69%,720px)}
+.home-editorial .home-hero h2{font-size:clamp(2.1rem,3.5vw,3.6rem)}
+.home-editorial .home-hero-actions a.home-primary{display:inline-flex;align-items:center;gap:14px;text-decoration:none;border-radius:13px;padding:14px 20px;font:700 .9rem Manrope,sans-serif}
+.home-editorial .home-editorial-intro{padding:65px clamp(8px,3vw,42px) 35px;max-width:890px}
+.home-editorial .home-editorial-intro h2{font:800 clamp(1.8rem,3.2vw,2.9rem)/1.18 Manrope,sans-serif;letter-spacing:-.035em;margin:12px 0 18px}
+.home-editorial .home-editorial-intro p{font-size:1.05rem;line-height:1.75;color:#b8ceda;max-width:720px}
+.home-editorial .home-chapter{display:grid;grid-template-columns:48% minmax(0,1fr);min-height:480px;margin:0 0 25px;border:1px solid rgba(189,225,245,.16);border-radius:28px;overflow:hidden;background:linear-gradient(135deg,rgba(14,38,58,.94),rgba(14,20,43,.96))}
+.home-editorial .home-chapter-ideas{grid-template-columns:minmax(0,1fr) 46%;background:linear-gradient(130deg,rgba(26,20,57,.96),rgba(11,39,54,.94))}
+.home-editorial .home-chapter-image{position:relative;min-height:400px;overflow:hidden;background:#122d44}
+.home-editorial .home-chapter-image:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,17,35,.72),transparent 42%);pointer-events:none}
+.home-editorial .home-chapter-image img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center}
+.home-editorial .home-image-caption{position:absolute;z-index:1;bottom:26px;left:26px;font-size:.68rem;letter-spacing:.15em;font-weight:800;color:#d3f9f7}
+.home-editorial .home-chapter-content{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:17px;padding:clamp(30px,4vw,60px);min-width:0}
+.home-editorial .home-chapter-content h2{font:800 clamp(1.6rem,2.7vw,2.55rem)/1.18 Manrope,sans-serif;letter-spacing:-.035em;margin:0}
+.home-editorial .home-chapter-content p{color:#c0d3df;font-size:clamp(.94rem,1.3vw,1.04rem);line-height:1.75;margin:0}
+.home-editorial .home-inline-note{display:flex;gap:12px;align-items:center;padding:15px 17px;border:1px solid rgba(114,226,221,.23);border-radius:15px;background:rgba(100,222,216,.07);font-size:.92rem;color:#c9f6f0;margin-top:8px}
+.home-editorial .home-text-link{margin-top:12px;border:1px solid rgba(113,228,222,.4);border-radius:13px;background:rgba(110,229,223,.08);color:#8df4eb;font:700 .9rem Manrope,sans-serif;padding:13px 17px;cursor:pointer}
+.home-editorial .home-chatgpt-reflection{position:relative;overflow:hidden;border-radius:28px;border:1px solid rgba(158,133,238,.36);background:radial-gradient(circle at 95% 5%,rgba(133,73,222,.25),transparent 46%),linear-gradient(130deg,rgba(21,23,54,.98),rgba(12,34,50,.96));padding:clamp(30px,6vw,76px);margin:36px 0 24px}
+.home-editorial .home-reflection-head{display:flex;align-items:center;gap:12px}
+.home-editorial .home-reflection-icon{display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(182,153,249,.4);border-radius:13px;color:#c5a5ff;font-size:1.7rem}
+.home-editorial .home-chatgpt-reflection h2{font:800 clamp(1.7rem,3vw,2.6rem)/1.18 Manrope,sans-serif;margin:20px 0}
+.home-editorial .home-chatgpt-reflection blockquote{border-left:3px solid #a88aee;padding:0 0 0 24px;margin:0;max-width:850px}
+.home-editorial .home-chatgpt-reflection blockquote p{font-size:clamp(1.05rem,1.65vw,1.28rem);line-height:1.8;color:#e0e6f1;margin:0 0 20px}
+.home-editorial .home-reflection-credit{font-size:.79rem;color:#9eb4c7;margin:24px 0 0}
+@media(max-width:1100px){.home-editorial .home-chapter,.home-editorial .home-chapter-ideas{grid-template-columns:1fr}.home-editorial .home-chapter-image{min-height:260px;height:310px}.home-editorial .home-chapter-ideas .home-chapter-image{grid-row:1}.home-editorial .home-chapter-content{padding:30px}.home-editorial .home-hero-content{width:70%}}
+@media(max-width:760px){.home-editorial .home-hero{min-height:0}.home-editorial .home-hero-content{width:100%}.home-editorial .home-editorial-intro{padding:40px 8px 24px}.home-editorial .home-editorial-intro p{font-size:.94rem}.home-editorial .home-chapter{border-radius:22px;margin-bottom:18px}.home-editorial .home-chapter-image{height:230px;min-height:230px}.home-editorial .home-chapter-content{padding:25px 22px;gap:13px}.home-editorial .home-chapter-content h2{font-size:1.65rem}.home-editorial .home-chapter-content p{font-size:.92rem}.home-editorial .home-chatgpt-reflection{padding:27px 22px;border-radius:22px}.home-editorial .home-chatgpt-reflection blockquote{padding-left:17px}.home-editorial .home-chatgpt-reflection blockquote p{font-size:1rem}}
