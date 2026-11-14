@@ -115,3 +115,23 @@ body:before{background-image:linear-gradient(rgba(128,88,255,.025) 1px,transpare
 footer a{color:var(--cyan);text-decoration:none}
 .story-card img{object-fit:cover}
 @media(max-width:760px){.axj-live-spot{flex-direction:column;align-items:flex-start;padding:22px}.axj-live-spot a{white-space:normal}}
+
+/* Home visual — imagens reais do acervo do projeto */
+.axj-dash-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.axj-dash-card{position:relative;isolation:isolate;overflow:hidden;padding:0;min-height:340px;justify-content:flex-end;background:rgba(8,23,41,.92);text-align:left}
+.axj-dash-card .axj-dash-visual{position:absolute;inset:0;z-index:-1;display:block;overflow:hidden;background:radial-gradient(circle at 75% 25%,rgba(105,118,255,.35),transparent 60%),#0c2130}
+.axj-dash-card .axj-dash-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,15,27,.08) 0%,rgba(4,15,27,.48) 40%,rgba(4,15,27,.98) 100%)}
+.axj-dash-card .axj-dash-visual img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;opacity:.74}
+.axj-dash-card .axj-dash-copy{display:flex;flex-direction:column;align-items:flex-start;gap:11px;padding:26px;width:100%;position:relative}
+.axj-dash-card .axj-dash-copy strong{max-width:560px;text-wrap:balance}
+.axj-dash-card .axj-dash-copy>span:not(.kicker){color:#d1e3ea;line-height:1.5;max-width:570px}
+.axj-dash-card .axj-dash-copy em{margin-top:6px;color:#82f4e9}
+.axj-dash-feature{min-height:360px;grid-column:span 2}
+.axj-dash-feature .axj-dash-copy{padding:34px}
+.axj-dash-feature .axj-dash-visual img{object-position:center 35%}
+.axj-dash-contact .axj-dash-visual img{object-fit:contain;object-position:right center;opacity:.65;transform:translateX(16%) scale(1.15)}
+.axj-dash-story .axj-dash-visual img{object-position:center 40%}
+.axj-dash-process .axj-dash-visual img{object-position:center 25%}
+.axj-dash-card:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+@media(prefers-reduced-motion:no-preference){.axj-dash-card .axj-dash-visual img{transition:transform .7s cubic-bezier(.2,.75,.2,1),opacity .5s}.axj-dash-card:hover .axj-dash-visual img{transform:scale(1.07);opacity:.94}.axj-dash-contact:hover .axj-dash-visual img{transform:translateX(16%) scale(1.22)}}
+@media(max-width:760px){.axj-dash-grid{grid-template-columns:1fr}.axj-dash-feature{grid-column:auto;min-height:345px}.axj-dash-card{min-height:310px}.axj-dash-card .axj-dash-copy,.axj-dash-feature .axj-dash-copy{padding:23px}.axj-dash-card .axj-dash-visual img{opacity:.64}}
