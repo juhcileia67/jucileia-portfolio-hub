@@ -277,3 +277,32 @@ body{background:radial-gradient(ellipse at 82% 4%,rgba(107,78,157,.3),transparen
 .home-editorial .home-primary{background:#a5d9df;border-color:#a5d9df;color:#102139}
 .home-editorial .home-hero-portrait:before{background:linear-gradient(90deg,rgba(23,29,53,.7),transparent 65%)}
 @media(max-width:760px){.home-editorial .home-hero-portrait:before{background:linear-gradient(180deg,rgba(23,29,53,.68),transparent 65%)}}
+
+/* Paleta editorial inspirada no moodboard: creme, areia, café e vinho.
+   Alteração exclusivamente cromática, mantendo estrutura e responsividade. */
+:root{--bg:#211b1a;--panel:rgba(76,58,51,.44);--panel-strong:rgba(51,39,36,.65);--line:rgba(232,218,203,.24);--text:#f5ede5;--muted:#d4c3b5;--cyan:#d7b8a0;--blue:#bda996;--violet:#b78d85;--pink:#b78378;--shadow:0 22px 60px rgba(20,12,11,.22)}
+body{background:radial-gradient(ellipse at 76% 7%,rgba(154,113,97,.23),transparent 43%),radial-gradient(ellipse at 10% 62%,rgba(119,79,67,.22),transparent 47%),linear-gradient(145deg,#342923 0%,#211b1a 48%,#1a1718 100%);color:var(--text)}
+.glass{background:linear-gradient(145deg,rgba(224,201,178,.13),rgba(93,71,62,.31))!important;border-color:rgba(232,218,203,.24)!important;box-shadow:0 18px 48px rgba(22,12,11,.18),inset 0 1px rgba(255,244,230,.08)!important;backdrop-filter:blur(20px) saturate(110%);-webkit-backdrop-filter:blur(20px) saturate(110%)}
+.orb-one{background:radial-gradient(ellipse,rgba(199,153,125,.48),rgba(135,87,77,.18) 48%,transparent 73%);opacity:.2}
+.orb-two{background:radial-gradient(ellipse,rgba(178,121,103,.34),transparent 72%);opacity:.19}
+.monogram{background:linear-gradient(145deg,#86665b,#ac887a);box-shadow:0 12px 25px rgba(50,25,23,.24)}
+.side-search,.top-search,.stats div{background:rgba(231,210,191,.065);border-color:rgba(235,215,197,.17)}
+input::placeholder{color:#bda99a}
+.progress i{background:linear-gradient(90deg,#6f393b,#b48e80,#e4cdb8)}
+.home-editorial .home-hero,.axj-home-refresh .home-hero{background:radial-gradient(circle at 86% 22%,rgba(145,91,82,.19),transparent 49%),linear-gradient(115deg,rgba(74,53,46,.62),rgba(47,34,33,.38))!important;border-color:rgba(229,208,189,.27)!important}
+.home-editorial .home-hero h2 span{color:#ead0ba}
+.home-editorial .home-hero p,.home-editorial .home-editorial-intro p,.home-editorial .home-chapter-content p{color:#e2d3c6}
+.home-editorial .home-chapter{background:linear-gradient(125deg,rgba(94,69,59,.46),rgba(51,39,38,.43))!important;border-color:rgba(234,215,195,.25)!important}
+.home-editorial .home-chapter-ideas{background:linear-gradient(120deg,rgba(102,72,62,.46),rgba(70,48,45,.39))!important}
+.home-editorial .home-chapter-image{background:#45332e}
+.home-editorial .home-chapter-image:after{background:linear-gradient(0deg,rgba(32,23,22,.72),transparent 42%)}
+.home-editorial .home-image-caption{color:#f5e4d3}
+.home-editorial .home-chatgpt-reflection{background:radial-gradient(circle at 90% 8%,rgba(124,30,35,.18),transparent 52%),linear-gradient(125deg,rgba(84,57,51,.52),rgba(52,37,36,.4))!important;border-color:rgba(215,184,160,.34)!important}
+.home-editorial .home-chatgpt-reflection blockquote{border-left-color:#c9a58f}
+.home-editorial .home-chatgpt-reflection blockquote p{color:#f1e5d9}
+.home-editorial .home-inline-note{background:rgba(214,174,146,.085);border-color:rgba(226,189,164,.25);color:#f1d9c7}
+.home-editorial .home-text-link{color:#e9c4ad;border-color:rgba(224,187,164,.36);background:rgba(190,139,110,.1)}
+.home-editorial .home-primary{background:#e8d7c5;border-color:#e8d7c5;color:#382923}
+.home-editorial .home-secondary{border-color:rgba(229,209,189,.3);color:#f2e5d8}
+.home-editorial .home-hero-portrait:before{background:linear-gradient(90deg,rgba(55,39,37,.68),transparent 65%)}
+@media(max-width:760px){.home-editorial .home-hero-portrait:before{background:linear-gradient(180deg,rgba(55,39,37,.65),transparent 65%)}}
