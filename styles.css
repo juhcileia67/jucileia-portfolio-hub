@@ -394,3 +394,45 @@ body:before{opacity:.3}
 .story-card,.evolution{background:#fff!important;color:#202228!important;border-radius:8px!important}
 @media(max-width:1100px){.home-editorial .home-chapter,.home-editorial .home-chapter-ideas{grid-template-columns:1fr!important;min-height:0!important}.home-editorial .home-chapter-image{min-height:300px!important;height:330px!important}.home-editorial .home-chapter-ideas .home-chapter-image{grid-row:1}.home-editorial .home-hero-portrait{width:38%!important}}
 @media(max-width:760px){.home-editorial .home-hero{min-height:0!important;padding:27px 22px 190px!important}.home-editorial .home-hero h2{font-size:clamp(2.1rem,9vw,3rem)!important}.home-editorial .home-hero-portrait{width:100%!important;height:185px!important}.home-editorial .home-hero-portrait:before{background:linear-gradient(180deg,#fff,transparent 65%)!important}.home-editorial .home-chapter-image{height:250px!important;min-height:250px!important}.home-editorial .home-chapter-content{padding:29px 24px!important}.home-editorial .home-chapter-content h2{font-size:2rem!important}.home-editorial .home-editorial-intro{padding-top:45px!important;padding-bottom:30px!important}}
+
+/* Paleta final da referência: fundo branco dominante; cor apenas nos detalhes.
+   Preserva exatamente a estrutura, dimensões, fontes e imagens existentes. */
+:root{
+ --bg:#ffffff;--panel:rgba(255,255,255,.92);--panel-strong:#fff;
+ --line:rgba(24,23,22,.13);--text:#1e1c1b;--muted:#67615e;
+ --cyan:#8a655b;--blue:#a28b7a;--violet:#772a30;--pink:#a47e71;
+ --shadow:0 8px 25px rgba(31,24,20,.055)
+}
+html,body{background:#fff!important;color:#1e1c1b!important}
+body:before{opacity:.12}
+.glass,.sidebar.glass,.rail.glass,.topbar.glass{background:rgba(255,255,255,.95)!important;border-color:#e8e5e2!important;box-shadow:0 8px 24px rgba(20,16,14,.045)!important}
+.home-editorial .home-hero,.axj-home-refresh .home-hero{background:#fff!important;border-color:#e9e6e3!important;color:#1e1c1b!important}
+.home-editorial .home-hero h2{color:#1e1c1b!important}
+.home-editorial .home-hero h2 span{color:#772a30!important}
+.home-editorial .home-hero p{color:#5f5b58!important}
+.home-editorial .home-editorial-intro{background:transparent!important}
+.home-editorial .home-editorial-intro h2{color:#1e1c1b!important}
+.home-editorial .home-editorial-intro p{color:#68625e!important}
+.home-editorial .home-chapter,.home-editorial .home-chapter-ideas{background:#fff!important;border-color:#e8e5e2!important;color:#1e1c1b!important}
+.home-editorial .home-chapter-story{border-left:4px solid #c4c4c4!important}
+.home-editorial .home-chapter-ideas{border-left:4px solid #a48b79!important}
+.home-editorial .home-chapter-making{border-left:4px solid #772a30!important}
+.home-editorial .home-chapter-content h2{color:#1e1c1b!important}
+.home-editorial .home-chapter-content p{color:#625e5a!important}
+.home-editorial .home-chapter-image{background:#f1f0ee!important}
+.home-editorial .home-chapter-story .home-chapter-image{background:#eeeeec!important}
+.home-editorial .home-chapter-ideas .home-chapter-image{background:#e9e1d9!important}
+.home-editorial .home-chapter-making .home-chapter-image{background:#e5e5e3!important}
+.home-editorial .home-chatgpt-reflection{background:#f5f5f4!important;border:1px solid #e9e7e4!important;border-left:5px solid #772a30!important;color:#1e1c1b!important}
+.home-editorial .home-chatgpt-reflection h2{color:#1e1c1b!important}
+.home-editorial .home-chatgpt-reflection blockquote p{color:#393735!important}
+.home-editorial .home-chatgpt-reflection blockquote{border-left-color:#772a30!important}
+.home-editorial .home-hero-portrait:before{background:linear-gradient(90deg,#fff 0%,transparent 42%)!important}
+.home-editorial .home-primary{background:#24201f!important;border-color:#24201f!important;color:#fff!important}
+.home-editorial .home-inline-note{background:#f7f5f2!important;border-color:#d6c6b7!important;color:#574b43!important}
+.home-editorial .home-text-link{background:#f6f4f1!important;color:#772a30!important}
+.home-editorial .kicker{color:#772a30!important}
+.rail-item.active,.rail-item:hover{background:#24201f!important;color:#fff!important}
+.side-search,.top-search,.stats div{background:#f8f8f7!important;border-color:#e8e6e4!important}
+.story-card,.evolution,.axj-dash-card,.axj-dash-feature{background:#fff!important;border-color:#e8e5e2!important;color:#1e1c1b!important}
+@media(max-width:760px){.home-editorial .home-hero-portrait:before{background:linear-gradient(180deg,#fff 0%,transparent 65%)!important}}
