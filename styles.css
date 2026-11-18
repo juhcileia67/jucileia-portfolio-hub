@@ -522,3 +522,12 @@ body{background:radial-gradient(ellipse at 78% 5%,#f4e8df,transparent 46%),linea
 .axj-screen[data-screen="contato"] .contact-actions a{padding:12px 18px!important}
 .axj-screen[data-screen="explorar"],.axj-screen[data-screen="projetos"],.axj-screen[data-screen="contato"]{padding-bottom:110px!important}
 }
+
+/* Visuais contextualizados: exibir as ilustrações completas e sem degradê sobre elas. */
+.home-cream .home-chapter-image{background:#f8f1ea!important;overflow:hidden!important}
+.home-cream .home-chapter-image img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;filter:none!important;opacity:1!important;mask-image:none!important}
+.home-cream .home-chapter-image:before,.home-cream .home-chapter-image:after{display:none!important}
+.home-cream .home-cream-banner img{object-fit:cover!important;object-position:center!important}
+.axj-screen[data-screen="projetos"] .project-card .card-art{background-size:cover!important;background-repeat:no-repeat!important;background-position:center!important}
+.axj-screen[data-screen="explorar"] .story-card img{object-fit:cover!important;object-position:center!important}
+.axj-screen[data-screen="explorar"] .story-card>div{flex:1}
