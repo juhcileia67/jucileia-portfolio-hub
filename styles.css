@@ -254,3 +254,26 @@ footer a{color:var(--cyan);text-decoration:none}
 /* Foto pessoal da primeira tela: retrato preservado sem recorte do rosto */
 .home-editorial .home-hero-portrait img{object-fit:contain!important;object-position:center bottom!important;mask-image:linear-gradient(90deg,transparent 0%,black 18%)!important}
 @media(max-width:760px){.home-editorial .home-hero-portrait img{object-fit:contain!important;object-position:center bottom!important;mask-image:linear-gradient(0deg,black 72%,transparent 100%)!important}}
+
+/* Harmonização visual 2026: vidro translúcido, azul petróleo + violeta suave.
+   Somente cores, fundos e contornos; estrutura e navegação preservadas. */
+:root{--bg:#080f20;--panel:rgba(17,31,54,.43);--panel-strong:rgba(15,25,48,.63);--line:rgba(191,207,245,.22);--text:#f4f4ff;--muted:#bdc6dc;--cyan:#86d9dd;--blue:#8797e8;--violet:#ae94ec;--pink:#b999e8;--shadow:0 22px 64px rgba(3,8,24,.2)}
+body{background:radial-gradient(ellipse at 82% 4%,rgba(107,78,157,.3),transparent 43%),radial-gradient(ellipse at 14% 45%,rgba(37,116,143,.22),transparent 48%),linear-gradient(145deg,#111a30 0%,#0c1529 48%,#0c1023 100%)}
+.glass{background:linear-gradient(145deg,rgba(111,137,188,.13),rgba(20,33,60,.32))!important;border-color:rgba(191,207,245,.22)!important;box-shadow:0 18px 50px rgba(3,9,26,.16),inset 0 1px rgba(255,255,255,.06)!important;backdrop-filter:blur(20px) saturate(125%);-webkit-backdrop-filter:blur(20px) saturate(125%)}
+.orb-one{opacity:.19;background:radial-gradient(ellipse,rgba(116,147,229,.75),rgba(143,108,211,.26) 48%,transparent 73%)}
+.orb-two{opacity:.2;background:radial-gradient(ellipse,rgba(105,196,209,.42),transparent 72%)}
+.side-search,.top-search,.stats div{background:rgba(137,163,208,.075);border-color:rgba(193,210,243,.16)}
+.monogram{background:linear-gradient(145deg,#667fc3,#997bc9);box-shadow:0 12px 26px rgba(97,81,157,.24)}
+.progress i{background:linear-gradient(90deg,#ae92d9,#8d9de6,#83d5d7)}
+.axj-home-refresh .home-hero,.home-editorial .home-hero{background:radial-gradient(circle at 84% 25%,rgba(147,119,204,.2),transparent 49%),linear-gradient(115deg,rgba(24,38,66,.62),rgba(42,30,67,.37))!important;border-color:rgba(201,200,244,.27)!important;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.home-editorial .home-chapter{background:linear-gradient(125deg,rgba(30,47,77,.52),rgba(27,31,64,.42))!important;border-color:rgba(198,204,239,.24)!important;box-shadow:inset 0 1px rgba(255,255,255,.055);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.home-editorial .home-chapter-ideas{background:linear-gradient(120deg,rgba(54,38,83,.45),rgba(28,60,77,.38))!important}
+.home-editorial .home-chatgpt-reflection{background:radial-gradient(circle at 90% 8%,rgba(151,115,208,.17),transparent 52%),linear-gradient(125deg,rgba(42,33,77,.55),rgba(22,49,68,.37))!important;border-color:rgba(181,159,235,.33)!important;box-shadow:inset 0 1px rgba(255,255,255,.07);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.home-editorial .home-chapter-content p,.home-editorial .home-editorial-intro p{color:#d0d7e9}
+.home-editorial .home-chatgpt-reflection blockquote p{color:#e8e7f7}
+.home-editorial .home-inline-note{background:rgba(113,175,192,.095);border-color:rgba(138,203,216,.24)}
+.home-editorial .home-hero h2 span,.home-editorial .home-text-link{color:#9be0e4}
+.home-editorial .home-chatgpt-reflection blockquote{border-left-color:#b39bdf}
+.home-editorial .home-primary{background:#a5d9df;border-color:#a5d9df;color:#102139}
+.home-editorial .home-hero-portrait:before{background:linear-gradient(90deg,rgba(23,29,53,.7),transparent 65%)}
+@media(max-width:760px){.home-editorial .home-hero-portrait:before{background:linear-gradient(180deg,rgba(23,29,53,.68),transparent 65%)}}
