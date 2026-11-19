@@ -695,3 +695,20 @@ body{background:radial-gradient(ellipse at 78% 5%,#f4e8df,transparent 46%),linea
   .axj-screen[data-screen="projetos"] .project-grid .card-copy{padding:20px!important;gap:10px!important}
   .axj-screen[data-screen="projetos"] .inside-grid .inside-card{min-height:295px!important}
 }
+
+/* Projeto editorial: capas exclusivas sem texto sobre as imagens */
+.axj-screen[data-screen="projetos"] .project-grid .card-art{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;isolation:isolate!important;overflow:hidden!important;border-radius:18px 18px 0 0!important;height:270px!important;min-height:270px!important;max-height:270px!important;flex-basis:270px!important}
+.axj-screen[data-screen="projetos"] .project-grid .art-learn{background-image:url('assets/editorial-learn.svg')!important}
+.axj-screen[data-screen="projetos"] .project-grid .art-axia{background-image:url('assets/editorial-axia.svg')!important}
+.axj-screen[data-screen="projetos"] .project-grid .art-mobile{background-image:url('assets/editorial-live.svg')!important}
+.axj-screen[data-screen="projetos"] .project-grid .art-studies{background-image:url('assets/editorial-creative.svg')!important}
+.axj-screen[data-screen="projetos"] .project-grid .card-art:before,.axj-screen[data-screen="projetos"] .project-grid .card-art:after,.axj-screen[data-screen="projetos"] .project-grid .card-overlay{display:none!important;content:none!important}
+.axj-screen[data-screen="projetos"] .project-grid .project-card{background:#fffaf6!important;border:1px solid #e6d4db!important;border-radius:19px!important;box-shadow:0 15px 38px rgba(51,17,43,.09)!important;overflow:hidden!important}
+.axj-screen[data-screen="projetos"] .project-grid .card-copy{background:#fffaf6!important;color:#34182b!important;position:relative!important;z-index:1!important;flex:1!important;padding:23px 25px 25px!important}
+.axj-screen[data-screen="projetos"] .project-grid .card-copy h3{color:#511b37!important}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card[data-project="student"]:before{background-image:url('assets/editorial-live.svg')!important}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card[data-project="teacher"]:before{background-image:url('assets/editorial-learn.svg')!important}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card[data-project="school"]:before{background-image:url('assets/editorial-axia.svg')!important}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card[data-project="axiaDeep"]:before{background-image:url('assets/editorial-creative.svg')!important}
+#project-dialog .dialog-project-cover{height:265px!important}
+@media(max-width:650px){.axj-screen[data-screen="projetos"] .project-grid .card-art{height:215px!important;min-height:215px!important;max-height:215px!important;flex-basis:215px!important}.axj-screen[data-screen="projetos"] .project-grid .card-copy{padding:20px!important}#project-dialog .dialog-project-cover{height:200px!important}}
