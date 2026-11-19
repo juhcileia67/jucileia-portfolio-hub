@@ -591,3 +591,107 @@ body{background:radial-gradient(ellipse at 78% 5%,#f4e8df,transparent 46%),linea
 .axj-showcase .showcase-sticker{position:absolute;z-index:2;right:2%;bottom:13%;border-radius:50%;background:#873c53;color:#fff;font-size:10px;line-height:1.5;letter-spacing:.7px;font-weight:700;width:94px;height:94px;display:grid;place-content:center;text-align:center;transform:rotate(13deg);box-shadow:0 12px 20px #6b3c4c55}
 .axj-screen[data-screen="projetos"] .card-art:has(.axj-showcase)>.axj-showcase{pointer-events:none}
 @media(max-width:600px){.axj-showcase .showcase-browser{width:72%}.axj-showcase .showcase-phone{right:5%}.axj-showcase .showcase-float{right:3%}}
+
+/* Correção 18/11: capa independente, texto nunca sobreposto à imagem */
+.axj-screen[data-screen="projetos"] .project-grid{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:18px!important;align-items:stretch!important
+}
+.axj-screen[data-screen="projetos"] .project-grid>.project-card,
+.axj-screen[data-screen="projetos"] .project-grid>.project-card.featured{
+  position:relative!important;display:flex!important;flex-direction:column!important;
+  grid-column:auto!important;grid-row:auto!important;
+  min-height:0!important;height:auto!important;padding:0!important;
+  overflow:hidden!important;background:#fffcf8!important;
+  border:1px solid #e7d8cd!important;border-radius:20px!important;
+  box-shadow:0 12px 28px rgba(58,35,30,.08)!important
+}
+.axj-screen[data-screen="projetos"] .project-grid .card-art{
+  position:relative!important;inset:auto!important;top:auto!important;left:auto!important;right:auto!important;bottom:auto!important;
+  width:100%!important;height:225px!important;min-height:225px!important;max-height:225px!important;
+  flex:0 0 225px!important;display:block!important;overflow:hidden!important;
+  transform:none!important;opacity:1!important;z-index:0!important
+}
+.axj-screen[data-screen="projetos"] .project-grid .card-overlay{display:none!important}
+.axj-screen[data-screen="projetos"] .project-grid .card-copy{
+  position:relative!important;inset:auto!important;top:auto!important;left:auto!important;
+  display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+  justify-content:flex-start!important;gap:12px!important;flex:1 1 auto!important;
+  width:100%!important;min-height:0!important;height:auto!important;
+  padding:24px!important;margin:0!important;transform:none!important;z-index:2!important;
+  background:#fffcf8!important;color:#2b201d!important
+}
+.axj-screen[data-screen="projetos"] .project-grid .card-copy .status{
+  position:static!important;inset:auto!important;transform:none!important;
+  display:inline-flex!important;max-width:100%!important;margin:0!important
+}
+.axj-screen[data-screen="projetos"] .project-grid .card-copy h3{
+  position:static!important;margin:0!important;font-size:clamp(1.45rem,2.1vw,1.9rem)!important;
+  line-height:1.15!important;overflow-wrap:anywhere!important
+}
+.axj-screen[data-screen="projetos"] .project-grid .card-copy p{
+  position:static!important;margin:0!important;font-size:14px!important;line-height:1.65!important;
+  max-width:65ch!important;overflow-wrap:anywhere!important
+}
+.axj-screen[data-screen="projetos"] .project-grid .card-copy .tags{
+  position:static!important;display:flex!important;flex-wrap:wrap!important;gap:7px!important;
+  margin:0 0 8px!important
+}
+.axj-screen[data-screen="projetos"] .project-grid .card-copy .open-project{
+  position:static!important;inset:auto!important;align-self:flex-start!important;
+  margin-top:auto!important;transform:none!important;min-height:43px!important
+}
+.axj-screen[data-screen="projetos"] .project-grid .axj-showcase{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important
+}
+/* Os cartões secundários também passam a ter capas e conteúdo organizado */
+.axj-screen[data-screen="projetos"] .inside-grid{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important
+}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card{
+  position:relative!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+  justify-content:flex-start!important;text-align:left!important;gap:9px!important;
+  min-width:0!important;min-height:315px!important;height:auto!important;padding:148px 22px 23px!important;
+  overflow:hidden!important
+}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card:before{
+  content:"";position:absolute;top:0;left:0;right:0;height:126px;
+  background:#e8d8e6 url('assets/visual-creative.svg') center/cover no-repeat;
+  border-bottom:1px solid #e5d7d1
+}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card[data-project="student"]:before{background-image:url('assets/visual-live.svg');background-color:#5c435e}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card[data-project="teacher"]:before{background-image:url('assets/visual-learn.svg');background-color:#e5d7e9}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card[data-project="school"]:before{background-image:url('assets/visual-axia.svg');background-color:#e4d3e9}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card>span,
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card>small,
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card>h3,
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card>p,
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card>i{
+  position:relative!important;inset:auto!important;transform:none!important;float:none!important;
+  display:block!important;width:auto!important;max-width:100%!important;
+  margin:0!important;line-height:1.4!important;overflow-wrap:anywhere!important
+}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card>span{font-size:19px!important}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card>small{font-size:10px!important}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card>h3{font-size:22px!important;line-height:1.15!important}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card>p{font-size:13px!important;line-height:1.55!important}
+.axj-screen[data-screen="projetos"] .inside-grid .inside-card>i{margin-top:auto!important;padding-top:14px!important;font-size:11px!important}
+/* Capas nos detalhes */
+#project-dialog .dialog-project-cover{
+  display:block!important;position:relative!important;width:100%!important;
+  height:205px!important;margin:0 0 24px!important;padding:0!important;
+  overflow:hidden!important;border-radius:15px!important;background:#efe4e8!important
+}
+#project-dialog .dialog-project-cover img{
+  display:block!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;object-position:center!important
+}
+@media(max-width:650px){
+  .axj-screen[data-screen="projetos"] .project-grid,
+  .axj-screen[data-screen="projetos"] .inside-grid{grid-template-columns:1fr!important}
+  .axj-screen[data-screen="projetos"] .project-grid .card-art{
+    height:205px!important;min-height:205px!important;max-height:205px!important;flex-basis:205px!important
+  }
+  .axj-screen[data-screen="projetos"] .project-grid .card-copy{padding:20px!important;gap:10px!important}
+  .axj-screen[data-screen="projetos"] .inside-grid .inside-card{min-height:295px!important}
+}
