@@ -327,7 +327,19 @@ const imageCaption = document.querySelector('#image-caption');
 document.querySelectorAll('.open-project').forEach(button => button.addEventListener('click', () => {
   const project = projects[button.dataset.project];
   const gallery = project.gallery ? `<section class="dialog-gallery" aria-label="Capturas do aplicativo"><div class="dialog-gallery-head"><h3>Capturas do aplicativo</h3><span>Toque em uma imagem para ampliar</span></div><div class="dialog-gallery-grid">${project.gallery.map(([src, label, alt]) => `<figure><button class="gallery-open" type="button" data-full="${src}" data-caption="${label}" data-alt="${alt}" aria-label="Ampliar: ${label}"><img src="${src}" alt="${alt}" loading="lazy"></button><figcaption>${label}</figcaption></figure>`).join('')}</div></section>` : '';
-  dialogContent.innerHTML = `<span class="dialog-kicker">${project.kicker}</span><h2 class="dialog-title">${project.title}</h2><p class="dialog-lead">${project.lead}</p><div class="dialog-grid">${project.items.map(([title, text]) => `<div><strong>${title}</strong><span>${text}</span></div>`).join('')}</div>${gallery}`;
+  const projectArtwork = {
+    learn: ['assets/visual-learn.svg','Learn Educação: cursos, módulos e aprendizagem'],
+    teacher: ['assets/visual-learn.svg','Learn Educação: cursos, módulos e aprendizagem'],
+    axia: ['assets/visual-axia.svg','AXIA: assistente de inteligência artificial'],
+    school: ['assets/visual-axia.svg','AXIA: assistente de inteligência artificial'],
+    axiaDeep: ['assets/visual-axia.svg','AXIA: assistente de inteligência artificial'],
+    mobile: ['assets/visual-live.svg','Axis Live: eventos e interação em lives pelo celular'],
+    student: ['assets/visual-live.svg','Axis Live: eventos e interação em lives pelo celular'],
+    studies: ['assets/visual-creative.svg','AXJ Creative: aplicativos, educação, games e IA']
+  };
+  const art = projectArtwork[button.dataset.project];
+  const cover = art ? `<figure class="dialog-project-cover"><img src="${art[0]}" alt="${art[1]}" loading="eager"></figure>` : '';
+  dialogContent.innerHTML = `${cover}<span class="dialog-kicker">${project.kicker}</span><h2 class="dialog-title">${project.title}</h2><p class="dialog-lead">${project.lead}</p><div class="dialog-grid">${project.items.map(([title, text]) => `<div><strong>${title}</strong><span>${text}</span></div>`).join('')}</div>${gallery}`;
   dialog.showModal();
 }));
 document.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
